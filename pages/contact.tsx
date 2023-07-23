@@ -1,10 +1,29 @@
-import ContactCard from "../components/ContactCard";
 import ContactForm from "../components/ContactForm";
-import GetQuoteSection from "../components/sections/GetQuoteSection";
 import Head from "next/head";
+import CommonLanding from "@/components/sections/CommonLanding";
+
+const contactCardsData = [
+  {
+    heading: "Email us",
+    copy: "For general inquiries and questions, contact us via email.",
+    linkText: "info@theperfectpainter.co.uk",
+    link: "mailto:info@theperfectpainter.co.uk",
+  },
+  {
+    heading: "Call us",
+    copy: "Tell us your needs and we’ll send you a free estimate.",
+    linkText: "0203 105 5111",
+    link: "tel:02031055111",
+  },
+  {
+    heading: "WhatsApp",
+    copy: "For general inquiries and questions, reach us on WhatsApp.",
+    linkText: "+44 7861 312295",
+    link: "https://wa.link/tmwizz",
+  },
+];
 
 const ContactPage: React.FC = () => {
-
   return (
     <>
       <Head>
@@ -14,17 +33,11 @@ const ContactPage: React.FC = () => {
           content="Welcome to our painting and decorating site"
         />
       </Head>
-      <section className="flex items-center justify-center bg-gray-200 h-[350px]">
-        <div className="max-w-screen-lg m-auto">
-          <h3 className="text-blue-900 letter-spacing-1 text-5xl font-bold">
-            Contact Us
-          </h3>
-        </div>
-      </section>
+      <CommonLanding heading={"Contact"} />
       <section className="py-10 max-sm:px-4">
-        <div className="max-w-screen-lg flex m-auto max-sm:block">
+        <div className="max-w-screen-lg flex m-auto max-sm:block shadow-lg">
           <div className="pr-20">
-            <h3 className="f-w-900 text-blue-900 text-4xl font-bold pb-1">
+            <h3 className="f-w-900 text-primary text-4xl font-bold pb-1">
               Say Hi!
             </h3>
             <p className="pb-5">
@@ -32,34 +45,11 @@ const ContactPage: React.FC = () => {
             </p>
             <ContactForm />
           </div>
-          <div>
-            <ContactCard
-              heading={"Email us"}
-              copy={
-                "For general inquiries and questions, contact us via email."
-              }
-              linkText={"info@theperfectpainter.co.uk"}
-              link={"mailto:info@theperfectpainter.co.uk"}
-            />
-
-            <ContactCard
-              heading={"Call us"}
-              copy={"Tell us your needs and we’ll send you a free estimate."}
-              linkText={"0203 105 5111"}
-              link={"tel:02031055111"}
-            />
-            <ContactCard
-              heading={"WhatsApp"}
-              copy={
-                "For general inquiries and questions, reach us on WhatsApp."
-              }
-              linkText={"+44 7861 312295"}
-              link={"https://wa.link/tmwizz"}
-            />
+          <div className="bg-primary text-white">
+            AlTech Painting LLC (480) 242-4186 andy@altechpainting.com
           </div>
         </div>
       </section>
-      <GetQuoteSection />
     </>
   );
 };

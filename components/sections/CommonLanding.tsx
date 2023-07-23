@@ -1,13 +1,20 @@
-const CommonLanding: React.FC<{heading: string}> = (props) => {
+const CommonLanding: React.FC<{ heading: string }> = (props) => {
   return (
-    <section className="flex items-center justify-center bg-gray-200 h-[350px] max-sm:h-[300px] max-sm:text-center">
-      <div className="max-w-screen-lg m-auto">
-        <h3 className="text-blue-900 letter-spacing-1 text-5xl font-bold max-sm:text-3xl">
-          {props.heading}
-        </h3>
+    <section
+      className="bg-cover bg-center"
+      style={{
+        backgroundImage: `url("https://altechpainting.com/wp-content/uploads/2017/03/header.png")`,
+      }}
+    >
+      <div className="max-w-screen-lg max-lg:max-w-screen-sm flex items-center justify-center max-sm:px-4 m-auto h-[350px] max-lg:h-[250px]">
+        <div className="text-white">
+          <h3 className="text-5xl font-bold max-lg:text-3xl text-center">
+            {props.heading}
+          </h3>
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default CommonLanding;

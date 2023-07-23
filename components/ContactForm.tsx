@@ -46,7 +46,7 @@ const ContactForm = () => {
 
       <div className="mb-4">
         <textarea
-          className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-900 h-[150px]"
+          className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary h-[150px]"
           id="message"
           name="message"
           placeholder="Message"
@@ -56,7 +56,7 @@ const ContactForm = () => {
         ></textarea>
       </div>
       <button
-        className="bg-blue-900 text-white font-bold py-2 px-4 rounded mt-4"
+        className="bg-primary text-white font-bold py-2 px-4 rounded mt-4"
         type="submit"
       >
         Submit

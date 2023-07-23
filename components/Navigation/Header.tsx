@@ -54,13 +54,13 @@ const Header: React.FC = () => {
           <div className="border-l border-r border-solid border-gray-200">
             <a href="tel:02031055111" className="flex p-2">
               <Image src={Phone} alt="Phone" className="h-5 pr-1" />
-              <span className="text-sm text-blue-900">0203 105 5111</span>
+              <span className="text-sm text-primary">0203 105 5111</span>
             </a>
           </div>
           <div className="border-l border-r border-solid border-gray-200">
             <a href="mailto:info@theperfectpainter.co.uk" className="flex p-2">
               <Image src={Email} alt="Email" className="h-5 pr-1" />
-              <span className="text-sm text-blue-900">
+              <span className="text-sm text-primary">
                 info@theperfectpainter.co.uk
               </span>
             </a>

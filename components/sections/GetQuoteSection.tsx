@@ -8,7 +8,7 @@ const GetQuoteSection = () => {
               For painting and decorating in London, please call our friendly
               team on
             </h3>
-            <h3 className="text-6xl text-blue-900 max-sm:text-4xl">
+            <h3 className="text-6xl text-primary max-sm:text-4xl">
               0203 105 5111
             </h3>
           </div>

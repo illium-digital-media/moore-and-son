@@ -1,49 +1,39 @@
-import React, { useState } from "react";
-import ResidentialTab from "../Home/ServicesTab/ResidentialTab";
-import ExteriorTab from "../Home/ServicesTab/ExteriorTab";
-import CommercialTab from "../Home/ServicesTab/CommercialTab";
-
 const IntroSection: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(1);
-
-  const changeTab = (tab: number) => {
-    setActiveTab(tab);
-  };
+  const items = [
+    {
+      heading: "Exterior Painting",
+      copy: "It is very important to regularly maintain the exterior of your property by properly prepping and repainting around every 5-7 years.",
+    },
+    {
+      heading: "Interior Painting",
+      copy: "Interior Painting Altech provides interior painting services to homeowners and business owners located in the Phoenix valley area.",
+    },
+    {
+      heading: "Epoxy Coating",
+      copy: "Epoxy and polyurethane are great for protecting your floor against stains, damage, chemicals, oils, and wear.",
+    },
+  ];
 
   return (
-    <div className="bg-slate-200">
-      <div className="max-w-screen-sm m-auto py-5 max-sm:px-4">
-        <div className="flex text-sm max-sm:text-[10px]">
-          <button
-            className={`p-6 uppercase font-bold border-r-2 border-black border-opacity-10 w-1/3 flex-1 ${
-              activeTab === 1 ? "bg-blue-900 text-white" : "bg-gray-100"
+    <div className="bg-gray-500 text-white">
+      <div className="max-w-screen-lg m-auto max-sm:px-4 flex">
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className={`flex-grow py-10 ${
+              index === 1
+                ? "px-4" // Add padding left and right for the middle item
+                : index === 0
+                ? "pr-4" // Add padding right for the first item
+                : "pl-4" // Add padding left for the last item
+            } ${
+              index === 1 ? "border-l border-r" : index === 0 ? "border-r" : "border-l"
             }`}
-            onClick={() => changeTab(1)}
           >
-            Residential
-          </button>
-          <button
-            className={`p-6 uppercase font-bold border-r-2 border-black border-opacity-10 w-1/3 flex-1 ${
-              activeTab === 2 ? "bg-blue-900 text-white" : "bg-gray-100"
-            }`}
-            onClick={() => changeTab(2)}
-          >
-            Commercial
-          </button>
-          <button
-            className={`p-6 uppercase font-bold flex-1 w-1/3 ${
-              activeTab === 3 ? "bg-blue-900 text-white" : "bg-gray-100"
-            }`}
-            onClick={() => changeTab(3)}
-          >
-            Exterior
-          </button>
-        </div>
-        <div className="bg-white text-base p-5">
-          {activeTab === 1 && <ResidentialTab />}
-          {activeTab === 2 && <CommercialTab />}
-          {activeTab === 3 && <ExteriorTab />}
-        </div>
+            <h3 className="font-bold text-2xl pb-2">{item.heading}</h3>
+            <p>{item.copy}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

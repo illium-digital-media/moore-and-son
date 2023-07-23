@@ -111,7 +111,7 @@ const ModalForm = (props: ModalFormProps) => {
 
               <div className="pb-3">
                 <textarea
-                  className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-900 h-48"
+                  className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary h-48"
                   id="message"
                   name="message"
                   placeholder="Your message here..."
@@ -121,7 +121,7 @@ const ModalForm = (props: ModalFormProps) => {
                 />
               </div>
               <button
-                className="bg-blue-900 text-white font-bold py-2 px-4 rounded m-auto flex mt-2"
+                className="bg-primary text-white font-bold py-2 px-4 rounded m-auto flex mt-2"
                 type="submit"
               >
                 Get a Quote

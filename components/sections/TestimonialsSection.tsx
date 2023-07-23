@@ -1,29 +1,20 @@
 import TestimonialsCarousel from "../TestimonialsCarousel";
 import Image from "next/image";
 import Bg from "../../assets/bg.jpg";
+import TestimonialsCards from "../TestimonialsCards";
 
 const TestimonialsSection: React.FC = () => {
   return (
-    <section id="what-they-say">
-      <div className="flex max-lg:px-4 max-lg:py-10">
-        <div className="h-50 max-lg:hidden">
-          <Image src={Bg} alt="" className="h-96" />
-        </div>
-        <div className="w-96">
+    <section>
+      <div className="max-w-screen-lg m-auto flex max-lg:block max-lg:text-center items-start flex max-lg:px-4 max-lg:py-10">
           <div className="col flex center-left">
-            <div>
-              <div>
-                <h3 className="font-bold text-blue-900 text-4xl">
+            <div className="text-center">
+                <h3 className="font-bold text-primary text-4xl">
                   Testimonials
                 </h3>
-                <p>Find out what out happy customer have to say!</p>
-                <br />
-                <TestimonialsCarousel />
-                <p>Get your free quote today!</p>
-              </div>
+                <TestimonialsCards />
             </div>
           </div>
-        </div>
       </div>
     </section>
   );

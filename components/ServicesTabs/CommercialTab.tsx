@@ -20,7 +20,7 @@ const CommercialTab = () => {
         <p> Please get in touch to find out more.</p>
       </div>
 
-      <button className="get-a-quote bg-blue-900 text-white p-3 text-xs rounded font-bold uppercase border-2  border-blue-900 mr-2">
+      <button className="get-a-quote bg-primary text-white p-3 text-xs rounded font-bold uppercase border-2  border-primary mr-2">
         <Link href="/commercial"> Read more</Link>
       </button>
     </div>

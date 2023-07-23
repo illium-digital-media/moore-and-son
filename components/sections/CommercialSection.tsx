@@ -8,7 +8,7 @@ const CommercialSection: React.FC = () => {
     <section id="service-content">
       <div className="flex max-w-screen-lg m-auto py-10">
         <div className="f-right col-1-2 left pr-10">
-          <h5 className="text-blue-900 font-bold text-2xl">
+          <h5 className="text-primary font-bold text-2xl">
             Commercial Painters and Decorators in London
           </h5>
 

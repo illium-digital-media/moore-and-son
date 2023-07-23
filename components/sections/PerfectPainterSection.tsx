@@ -3,7 +3,7 @@ import Bg from "../../assets/bg.jpg";
 
 const PerfectPainterSection: React.FC = () => {
   return (
-    <div className=" bg-blue-900 text-white flex">
+    <div className=" bg-primary text-white flex">
       <div className="col-1-2 left w-1/2 max-lg:w-full max-lg:ml-auto">
         <div className="flex lg:ml-auto center-left max-w-lg justify-end lg:pr-20 py-20 max-lg:max-w-screen-sm max-lg:m-auto">
           <div className="flex-item max-lg:px-4">
@@ -27,7 +27,7 @@ const PerfectPainterSection: React.FC = () => {
             </p>
             <br />
             <Link href="/contact">
-              <button className="text-xs rounded font-bold uppercase border-2 border-white p-3 hover:bg-white hover:text-blue-900 duration-200">
+              <button className="text-xs rounded font-bold uppercase border-2 border-white p-3 hover:bg-white hover:text-primary duration-200">
                 Contact Us
               </button>
             </Link>

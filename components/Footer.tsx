@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="text-white">
       <div className="m-auto">
-        <div className="bg-blue-800 py-10">
+        <div className="bg-primary py-10">
           <div className="max-w-screen-lg m-auto flex max-lg:block max-lg:text-center items-start">
             <div className="flex-grow flex items-center justify-center">
               <div className="max-lg:pb-5">

@@ -1,19 +1,19 @@
 import Link from "next/link";
-import React, { useState } from "react";
-
-// Define the type for subMenuItems
-type SubMenuItem = {
-  pageLink: string;
-  copy: string;
-};
+import { useRouter } from "next/router";
 
 const NavItem: React.FC<{
   pageLink: string;
   handleClick: () => void;
   copy: string;
 }> = (props) => {
+  const router = useRouter();
+  const isActive = router.pathname === props.pageLink;
   return (
-    <li className="p-3 m-auto uppercase text-sm font-bold text-blue-900  hover:border-b hover:border-blue-900  duration-200 relative">
+    <li
+      className={`p-3 m-auto uppercase text-xs font-bold ${
+        isActive ? "text-primary" : "text-black hover:text-primary"
+      } duration-200 relative`}
+    >
       <Link href={props.pageLink} onClick={props.handleClick}>
         {props.copy}
       </Link>

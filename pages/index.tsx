@@ -19,11 +19,8 @@ const HomePage: React.FC = () => {
       </Head>
       <LandingSection />
       <IntroSection />
-      <PerfectPainterSection />
+      <TestimonialsSection/>
       <AboutUsSection />
-      <WhyUsSection />
-      <GetQuoteSection />
-      <TestimonialsSection />
     </>
   );
 };
