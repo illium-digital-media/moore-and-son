@@ -1,10 +1,11 @@
 import ContactButton from "../CTAs/ContactButton";
 import GetAQuoteButton from "../CTAs/GetAQuoteButton";
 import Image from 'next/image';
+import Section from "../Section";
 
 const ExteriorSection: React.FC = () => {
   return (
-    <section className="p-10">
+    <Section>
       <div className="flex max-w-screen-lg m-auto">
         <div className="f-right col-1-2 left pr-10">
           <h5 className="text-primary font-bold text-2xl">
@@ -42,7 +43,7 @@ const ExteriorSection: React.FC = () => {
         </div>
         <div></div>
       </div>
-    </section>
+    </Section>
   );
 }
 

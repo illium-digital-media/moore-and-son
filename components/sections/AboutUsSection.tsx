@@ -1,5 +1,6 @@
 import GetAQuoteButton from "../CTAs/GetAQuoteButton";
 import PhotoGallery from "../PhotoGallery";
+import Section from "../Section";
 
 const imageGallery = [
   // Add the paths or URLs of your images here
@@ -11,7 +12,7 @@ const imageGallery = [
 
 const AboutUsSection: React.FC = () => {
   return (
-    <section id="about-us">
+    <Section>
       <div className="flex max-w-screen-lg m-auto max-lg:px-4">
         <div className="w-2/4 flex rounded-xl">
           <div className="my-auto px-10 ">
@@ -30,7 +31,7 @@ const AboutUsSection: React.FC = () => {
           <PhotoGallery images={imageGallery} />
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

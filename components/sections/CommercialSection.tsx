@@ -2,10 +2,11 @@ import ContactButton from "../CTAs/ContactButton";
 import GetAQuoteButton from "../CTAs/GetAQuoteButton";
 import Image from "next/image";
 import Painter from "../../assets/painter.jpg";
+import Section from "../Section";
 
 const CommercialSection: React.FC = () => {
   return (
-    <section id="service-content">
+    <Section>
       <div className="flex max-w-screen-lg m-auto py-10">
         <div className="f-right col-1-2 left pr-10">
           <h5 className="text-primary font-bold text-2xl">
@@ -32,7 +33,7 @@ const CommercialSection: React.FC = () => {
           <Image className="col-1-1 dis-b mar-0-a" src={Painter} alt="" />
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
