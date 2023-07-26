@@ -18,7 +18,7 @@ const PhotoGallery: React.FC<{images: string[]}> = (props) => {
       <img
         src={props.images[selectedImageIndex]}
         alt={`Image ${selectedImageIndex + 1}`}
-        className="cursor-pointer rounded-r-xl"
+        className="cursor-pointer rounded-xl"
         onClick={handleNextImage}
 
       />
