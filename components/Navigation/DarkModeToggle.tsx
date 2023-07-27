@@ -53,7 +53,7 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={handleToggle}
-      className="flex items-center p-2 rounded-full bg-gray-300 dark:bg-gray-800"
+      className="flex items-center p-2 rounded-full"
     >
       {darkMode ? <SunIcon /> : <MoonIcon />}
     </button>
