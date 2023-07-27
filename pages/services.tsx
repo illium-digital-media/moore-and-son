@@ -2,7 +2,7 @@ import CommonLanding from "../components/sections/CommonLanding";
 import Head from "next/head";
 import ServicesSection from "@/components/sections/ServicesSection";
 
-const TestimonialsPage: React.FC = () => {
+const ServicesPage: React.FC = () => {
   return (
     <>
       <Head>
@@ -18,4 +18,4 @@ const TestimonialsPage: React.FC = () => {
   );
 };
 
-export default TestimonialsPage;
+export default ServicesPage;

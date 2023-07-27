@@ -1,4 +1,3 @@
-import TestimonialsCarousel from "../TestimonialsCarousel";
 import TestimonialsCards from "../TestimonialsCards";
 import Section from "../Section";
 

@@ -13,8 +13,7 @@ const ResidentialPage: React.FC = () => {
         />
       </Head>
       <CommonLanding heading={"Gallery"} />
-      <Gallery/>
-
+      <Gallery />
     </>
   );
 };
