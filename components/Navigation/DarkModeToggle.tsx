@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
+import { DarkModeContext } from '../DarkModeContext'; // update this path to your actual DarkModeContext file location
+
 // Moon icon
 const MoonIcon = () => (
     <svg
@@ -35,29 +37,16 @@ const MoonIcon = () => (
     </svg>
   );
   
-
-  
-const DarkModeToggle = () => {
-    const [darkMode, setDarkMode] = useState(false);
-
-    useEffect(() => {
-      // Apply the theme based on the darkMode state
-      const body = document.body;
-      body.classList.remove(darkMode ? "light-theme" : "dark-theme");
-      body.classList.add(darkMode ? "dark-theme" : "light-theme");
-    }, [darkMode]);
-  
-    const handleToggle = () => {
-      setDarkMode((prevDarkMode) => !prevDarkMode);
-    };
-  return (
-    <button
-      onClick={handleToggle}
-      className="flex items-center p-2 rounded-full"
-    >
-      {darkMode ? <SunIcon /> : <MoonIcon />}
-    </button>
-  );
-};
+  const DarkModeToggle = () => {
+    const { darkMode, setDarkMode } = useContext(DarkModeContext);  
+    return (
+      <button
+        onClick={() => setDarkMode(!darkMode)}
+        className="flex items-center p-2 rounded-full"
+      >
+        {darkMode ? <SunIcon /> : <MoonIcon />}
+      </button>
+    );
+  };
 
 export default DarkModeToggle;

@@ -4,7 +4,6 @@ import React from "react";
 import commercialBuilding from "../../assets/commercial-building.jpg";
 import exteriorBuilding from "../../assets/home-exterior.jpg";
 import interiorBuilding from "../../assets/painting-interior.jpg";
-import Section from "../Section";
 
 interface CardData {
   imageUrl: string;
@@ -23,7 +22,7 @@ const Card: React.FC<CardData> = ({ imageUrl, heading, text, value, link }) => {
           alt="Card"
           className="w-full h-1/2 object-cover"
         />
-        <div className="p-4">
+        <div className="p-4 text-center">
           <h3 className="text-xl font-semibold mb-2">{heading}</h3>
           <p className="text-gray-700">{text}</p>
         </div>
@@ -59,7 +58,6 @@ const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <Section>
       <div className="flex flex-wrap justify-center">
         {cards.map((card, index) => (
           <Card
@@ -72,7 +70,6 @@ const ServicesSection: React.FC = () => {
           />
         ))}
       </div>
-    </Section>
   );
 };
 

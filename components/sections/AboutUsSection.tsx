@@ -1,6 +1,5 @@
 import GetAQuoteButton from "../CTAs/GetAQuoteButton";
 import PhotoGallery from "../PhotoGallery";
-import Section from "../Section";
 
 const imageGallery = [
   // Add the paths or URLs of your images here
@@ -12,26 +11,23 @@ const imageGallery = [
 
 const AboutUsSection: React.FC = () => {
   return (
-    <Section>
-      <div className="flex max-w-screen-lg m-auto max-lg:px-4">
-        <div className="w-2/4 flex rounded-xl">
-          <div className="my-auto px-10 ">
-            <h3 className="text-2xl font-bold pb-4">What We Stand For</h3>
-            <p className="pb-4">
-              From the exterior of your home or business to the interior rooms
-              or surrounding cool decks, no painting project is too large for
-              us! We are committed to providing the highest level of
-              professionalism, service response, and quality workmanship all at
-              an affordable price
-            </p>
-            <GetAQuoteButton />
-          </div>
-        </div>
-        <div className="w-2/4">
-          <PhotoGallery images={imageGallery} />
+    <div className="flex max-w-screen-lg m-auto max-lg:px-4">
+      <div className="w-2/4 flex rounded-xl">
+        <div className="my-auto px-10 ">
+          <h3 className="text-2xl font-bold pb-4">What We Stand For</h3>
+          <p className="pb-4">
+            From the exterior of your home or business to the interior rooms or
+            surrounding cool decks, no painting project is too large for us! We
+            are committed to providing the highest level of professionalism,
+            service response, and quality workmanship all at an affordable price
+          </p>
+          <GetAQuoteButton />
         </div>
       </div>
-    </Section>
+      <div className="w-2/4">
+        <PhotoGallery images={imageGallery} />
+      </div>
+    </div>
   );
 };
 

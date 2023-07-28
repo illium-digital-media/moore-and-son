@@ -2,9 +2,11 @@ import Link from "next/link";
 import BurgerMenu from "../BurgerMenu";
 import NavItem from "./NavItem";
 import Image from "next/image";
-import Logo from "../../assets/logo.svg";
-import Phone from "../../assets/phone.svg";
+import LogoPlaceholder from "../../assets/logo-placeholder.png";
 import DarkModeToggle from "./DarkModeToggle";
+import PhoneIcon from "../Icons/Phone";
+import { DarkModeContext } from '../DarkModeContext';
+import React, { useContext } from 'react';
 
 const navItems = [
   { pageLink: "/", copy: "Home" },
@@ -13,21 +15,24 @@ const navItems = [
   { pageLink: "/gallery", copy: "Gallery" },
   { pageLink: "/contact", copy: "Contact" },
 ];
+const bgColorLightMode = 'bg-white';
+const bgColorDarkMode = 'bg-gray-800';
 
 const MainNavigation: React.FC = () => {
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+
   return (
     <header
-      className={
-        "w-full max-lg:shadow-lg max-lg:fixed fixed bg-white shadow-lg z-10"
-      }
+      className={`w-full max-lg:shadow-lg max-lg:fixed fixed shadow-lg z-10 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}
+      style={{ transition: "background-color 0.3s ease" }}
     >
       <nav className="flex justify-between m-auto max-w-screen-lg max-lg:px-4 max-lg:bg-white">
         <BurgerMenu />
         <div className="py-2">
           <Link href="/">
             <Image
-              src={Logo}
-              alt="Painting and decorating logo"
+              src={LogoPlaceholder}
+              alt="Logo Placeholder"
               className="w-24"
             />
           </Link>
@@ -42,10 +47,14 @@ const MainNavigation: React.FC = () => {
             />
           ))}
           <a href="tel:02031055111" className="flex ml-10 items-center">
-            <Image src={Phone} alt="Phone" className="h-5 pr-1" />
-            <span className="text-lg text-primary font-bold">
-              0203 105 5111
-            </span>
+            <div className="flex items-center">
+              <div className="text-primary pr-1">
+                <PhoneIcon />
+              </div>
+              <span className="text-lg text-primary font-bold">
+                0123 456 789
+              </span>
+            </div>
           </a>
         </ul>
         <DarkModeToggle />

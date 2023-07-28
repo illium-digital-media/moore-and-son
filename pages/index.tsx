@@ -6,6 +6,7 @@ import TestimonialsSection from "../components/sections/TestimonialsSection";
 import WhyUsSection from "../components/sections/WhyUsSection";
 import LandingSection from "../components/sections/LandingSection";
 import Head from "next/head";
+import Section from "@/components/Section";
 
 const HomePage: React.FC = () => {
   return (
@@ -17,10 +18,16 @@ const HomePage: React.FC = () => {
           content="Welcome to our painting and decorating site"
         />
       </Head>
-      <LandingSection />
-      <IntroSection />
-      <TestimonialsSection/>
-      <AboutUsSection />
+        <LandingSection />
+      <Section index={0}>
+        <IntroSection />
+      </Section>
+      <Section index={1}>
+        <TestimonialsSection />
+      </Section>
+      <Section index={2}>
+        <AboutUsSection />
+      </Section>
     </>
   );
 };
