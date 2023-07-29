@@ -1,5 +1,4 @@
 import TestimonialsCards from "../TestimonialsCards";
-import Section from "../Section";
 
 const TestimonialsSection: React.FC = () => {
   return (

@@ -12,8 +12,11 @@ const imageGallery = [
 const AboutUsSection: React.FC = () => {
   return (
     <div className="flex max-w-screen-lg m-auto max-lg:px-4">
-      <div className="w-2/4 flex rounded-xl">
-        <div className="my-auto px-10 ">
+      <div className="sm:w-2/4 flex rounded-xl">
+        <div className="my-auto sm:px-10 ">
+          <div className="sm:hidden pb-3">
+            <PhotoGallery images={imageGallery} />
+          </div>
           <h3 className="text-2xl font-bold pb-4">What We Stand For</h3>
           <p className="pb-4">
             From the exterior of your home or business to the interior rooms or
@@ -24,7 +27,7 @@ const AboutUsSection: React.FC = () => {
           <GetAQuoteButton />
         </div>
       </div>
-      <div className="w-2/4">
+      <div className="w-2/4 max-sm:hidden">
         <PhotoGallery images={imageGallery} />
       </div>
     </div>

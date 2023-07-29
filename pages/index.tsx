@@ -7,6 +7,7 @@ import WhyUsSection from "../components/sections/WhyUsSection";
 import LandingSection from "../components/sections/LandingSection";
 import Head from "next/head";
 import Section from "@/components/Section";
+import FAQ from "@/components/FAQ";
 
 const HomePage: React.FC = () => {
   return (
@@ -27,6 +28,9 @@ const HomePage: React.FC = () => {
       </Section>
       <Section index={2}>
         <AboutUsSection />
+      </Section>
+      <Section index={3}>
+        <FAQ />
       </Section>
     </>
   );
