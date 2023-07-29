@@ -26,7 +26,7 @@ const AboutPage: React.FC = () => {
       </Head>
       <CommonLanding heading={"About Us"} />
       <Section index={0}>
-        <div className="max-w-screen-lg m-auto">
+        <div className="max-w-screen-lg m-auto max-lg:px-4">
           <h3 className="text-2xl font-bold pb-4">The Brushstrokes Promise</h3>
           <p className="pb-2">
             Brushstrokes Painting & Decorating offers professional painting and

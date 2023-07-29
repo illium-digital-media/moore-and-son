@@ -2,12 +2,13 @@ import CommonLanding from "../../components/sections/CommonLanding";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import PhotoGallery from "@/components/PhotoGallery";
-import Example1 from '/assets/example-1.png';
-import Example2 from '/assets/example-2.png';
-import Example3 from '/assets/example-3.png';
-
+import Example1 from "/assets/example-1.png";
+import Example2 from "/assets/example-2.png";
+import Example3 from "/assets/example-3.png";
 
 import { StaticImageData } from "next/image";
+import InfoCard from "@/components/InfoCard";
+import Section from "@/components/Section";
 
 interface ServiceData {
   title: string;
@@ -29,11 +30,7 @@ const servicesData: ServicesData = {
       "With our commercial painting services, you can create a positive and lasting impression on your customers and clients.",
       "We work with businesses across different industries, and we are committed to delivering top-notch painting solutions that exceed your expectations.",
     ],
-    images: [
-      Example1,
-      Example2,
-      Example3,
-    ],
+    images: [Example1, Example2, Example3],
   },
   epoxy: {
     title: "Epoxy Coating",
@@ -44,11 +41,7 @@ const servicesData: ServicesData = {
       "Whether you want to protect your garage floor, industrial space, or retail area, our epoxy coatings will enhance the durability and aesthetics of the surface.",
       "Our team of professionals will prepare the surface properly and apply the epoxy coating with precision to ensure a seamless and attractive finish.",
     ],
-    images: [
-      Example1,
-      Example2,
-      Example3,
-    ],
+    images: [Example1, Example2, Example3],
   },
   interior: {
     title: "Interior Painting",
@@ -60,11 +53,7 @@ const servicesData: ServicesData = {
       "Let us bring your dream interior to life! Whether you're looking to create a cozy bedroom, a stylish living room, or a vibrant kitchen, our interior painting services will elevate your space to new heights. Experience the transformative power of color and design with [Company Name], your trusted partner in painting and decorating. Get in touch with us today to schedule a consultation and take the first step towards a beautiful, inspiring home.",
     ],
 
-    images: [
-      Example1,
-      Example2,
-      Example3,
-    ],
+    images: [Example1, Example2, Example3],
   },
   exterior: {
     title: "Exterior Painting",
@@ -76,11 +65,7 @@ const servicesData: ServicesData = {
       "We take pride in delivering exceptional exterior painting results that enhance the overall aesthetics of your home or business.",
       "Whether you need to repaint the entire exterior or focus on specific areas, we are here to provide reliable and efficient painting solutions.",
     ],
-    images: [
-      Example1,
-      Example2,
-      Example3,
-    ],
+    images: [Example1, Example2, Example3],
   },
 };
 
@@ -101,20 +86,13 @@ const ServicePage: React.FC = () => {
       {serviceData && (
         <>
           <CommonLanding heading={serviceData.title ?? "Services"} />
-          <section className="max-w-screen-lg m-auto py-20">
-            <div className="flex items-center">
-              <div className="w-1/2">
-                {serviceData.paragraph.map((paragraph: string, index: any) => (
-                  <p key={index} className="pb-2">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-              <div className="w-1/2">
-                <PhotoGallery images={serviceData.images} />
-              </div>
-            </div>
-          </section>
+          <Section index={0}>
+            <InfoCard
+              title={serviceData.title}
+              content={serviceData.paragraph}
+              imageGallery={serviceData.images}
+            />
+          </Section>
         </>
       )}
     </>
