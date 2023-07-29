@@ -5,9 +5,11 @@ import LandingSection from "../components/sections/LandingSection";
 import Head from "next/head";
 import Section from "@/components/Section";
 import FAQ from "@/components/FAQ";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
 
 const sections = [
   { Component: IntroSection },
+  { Component: WhyChooseUs },
   { Component: TestimonialsSection },
   { Component: AboutUsSection },
   { Component: FAQ },

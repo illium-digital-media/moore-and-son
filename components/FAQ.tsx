@@ -79,8 +79,7 @@ const FAQ: React.FC = () => {
           <div
             className={`faq-section ${
               openItemIndices.includes(index) ? "open" : "closed"
-            } overflow
-w-hidden transition-max-h duration-300`}
+            } overflow w-hidden transition-max-h duration-300`}
           >
             <div
               className="flex justify-between cursor-pointer"
