@@ -55,16 +55,8 @@ const faqs = [
   },
 ];
 
-interface FAQItem {
-  question: string;
-  answer: string;
-}
 
-interface FAQProps {
-  faqItems: FAQItem[];
-}
-
-const FAQ: React.FC<FAQProps> = () => {
+const FAQ: React.FC = () => {
   const [openItemIndices, setOpenItemIndices] = useState<number[]>([]);
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
