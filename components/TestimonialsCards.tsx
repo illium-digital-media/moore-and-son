@@ -34,18 +34,18 @@ const Testimonials = () => {
       {testimonials.map((testimonial, index) => (
         <div
           key={index}
-          className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 border border-gray-300 rounded-lg mb-4 ${
+          className={`w-full sm:pb-2 mx-1 sm:w-1/2 md:w-1/4 border border-gray-300 rounded-lg mb-4 ${
             darkMode ? "bg-zinc-700" : "bg-white"
           }`}
-          style={{ margin: "0 4px" }} // Add margin here to create spacing
+        // Add margin here to create spacing
         >
-          <div className=" h-1/2">
+          <div className="">
             <Image
               src={testimonial.image}
               alt={testimonial.name}
               height={100}
               width={100}
-              className="w-full h-40"
+              className="w-full h-40 rounded-t-lg"
             />
           </div>
           <div className="p-4">

@@ -1,6 +1,7 @@
+import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
 
-const PhotoGallery: React.FC<{images: string[]}> = (props) => {
+const PhotoGallery: React.FC<{images: string[] | StaticImageData[]}> = (props) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number>(0);
 
   const handleNextImage = () => {
@@ -15,12 +16,11 @@ const PhotoGallery: React.FC<{images: string[]}> = (props) => {
 
   return (
     <div className="relative">
-      <img
+      <Image
         src={props.images[selectedImageIndex]}
         alt={`Image ${selectedImageIndex + 1}`}
         className="cursor-pointer rounded-xl"
         onClick={handleNextImage}
-
       />
       {props.images.length > 1 && (
         <>

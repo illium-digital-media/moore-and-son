@@ -1,4 +1,5 @@
 import TestimonialsCards from "../TestimonialsCards";
+import TestimonialsSlider from "../TestimonialsSlider";
 
 const TestimonialsSection: React.FC = () => {
   return (
@@ -8,6 +9,7 @@ const TestimonialsSection: React.FC = () => {
           <h3 className="font-bold text-primary text-4xl pb-10">
             Testimonials
           </h3>
+          {/* <TestimonialsSlider /> */}
           <TestimonialsCards />
         </div>
       </div>

@@ -2,11 +2,17 @@ import CommonLanding from "../../components/sections/CommonLanding";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import PhotoGallery from "@/components/PhotoGallery";
+import Example1 from '/assets/example-1.png';
+import Example2 from '/assets/example-2.png';
+import Example3 from '/assets/example-3.png';
+
+
+import { StaticImageData } from "next/image";
 
 interface ServiceData {
   title: string;
   paragraph: string[];
-  images: string[];
+  images: string[] | StaticImageData[];
 }
 
 interface ServicesData {
@@ -24,9 +30,9 @@ const servicesData: ServicesData = {
       "We work with businesses across different industries, and we are committed to delivering top-notch painting solutions that exceed your expectations.",
     ],
     images: [
-      "https://altechpainting.com/wp-content/uploads/2019/01/3-1.png",
-      "https://altechpainting.com/wp-content/uploads/2019/01/5-1.png",
-      "https://altechpainting.com/wp-content/uploads/2019/01/4-1.png",
+      Example1,
+      Example2,
+      Example3,
     ],
   },
   epoxy: {
@@ -39,9 +45,9 @@ const servicesData: ServicesData = {
       "Our team of professionals will prepare the surface properly and apply the epoxy coating with precision to ensure a seamless and attractive finish.",
     ],
     images: [
-      "https://altechpainting.com/wp-content/uploads/2019/01/3-1.png",
-      "https://altechpainting.com/wp-content/uploads/2019/01/5-1.png",
-      "https://altechpainting.com/wp-content/uploads/2019/01/4-1.png",
+      Example1,
+      Example2,
+      Example3,
     ],
   },
   interior: {
@@ -55,9 +61,9 @@ const servicesData: ServicesData = {
     ],
 
     images: [
-      "https://altechpainting.com/wp-content/uploads/2019/01/3-1.png",
-      "https://altechpainting.com/wp-content/uploads/2019/01/5-1.png",
-      "https://altechpainting.com/wp-content/uploads/2019/01/4-1.png",
+      Example1,
+      Example2,
+      Example3,
     ],
   },
   exterior: {
@@ -71,9 +77,9 @@ const servicesData: ServicesData = {
       "Whether you need to repaint the entire exterior or focus on specific areas, we are here to provide reliable and efficient painting solutions.",
     ],
     images: [
-      "https://altechpainting.com/wp-content/uploads/2019/01/3-1.png",
-      "https://altechpainting.com/wp-content/uploads/2019/01/5-1.png",
-      "https://altechpainting.com/wp-content/uploads/2019/01/4-1.png",
+      Example1,
+      Example2,
+      Example3,
     ],
   },
 };

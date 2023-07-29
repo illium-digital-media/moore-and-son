@@ -55,7 +55,6 @@ const faqs = [
   },
 ];
 
-
 const FAQ: React.FC = () => {
   const [openItemIndices, setOpenItemIndices] = useState<number[]>([]);
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
@@ -71,7 +70,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="max-w-screen-lg m-auto">
+    <div className="max-w-screen-lg m-auto max-lg:px-5">
       <h3 className="font-bold text-primary text-4xl pb-10 text-center">
         FAQs
       </h3>

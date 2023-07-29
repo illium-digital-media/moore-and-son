@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from "react";
+import Example1 from '../assets/example-1.png';
+import Example2 from '../assets/example-2.png';
+import Example3 from '../assets/example-3.png';
+import Image, { StaticImageData } from "next/image";
 // Sample image data (replace with your actual image data)
 const imageData = [
   {
     id: 1,
-    url: "https://altechpainting.com/wp-content/uploads/2019/01/3-1.png",
+    url: Example1,
     category: "Exterior",
   },
   {
     id: 2,
-    url: "https://altechpainting.com/wp-content/uploads/2019/01/5-1.png",
+    url: Example2,
     category: "Interior",
   },
   {
     id: 3,
-    url: "https://altechpainting.com/wp-content/uploads/2019/01/4-1.png",
+    url: Example3,
     category: "Other",
   },
 
@@ -85,7 +89,7 @@ const Gallery: React.FC = () => {
 
       <div className="flex flex-wrap">
         {filteredImages.map((image) => (
-          <img
+          <Image
             key={image.id}
             src={image.url}
             alt={image.category}

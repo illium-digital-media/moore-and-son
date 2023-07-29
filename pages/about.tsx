@@ -1,7 +1,18 @@
 import AboutUsSection from "../components/sections/AboutUsSection";
 import CommonLanding from "../components/sections/CommonLanding";
 import Head from "next/head";
+import ProfilePicture from "../assets/profile-pic.jpg";
 import Section from "@/components/Section";
+import InfoCard from "@/components/InfoCard";
+
+const personalProfile = [
+  "Hello there, I&apos;m John Lawson, the proud founder of Brushstrokes Painting & Decorating. My love for art and design began at a young age and led me to pursue a career in painting and decorating.",
+  "My journey started with an apprenticeship under well-known local decorators, where I honed my skills and mastered the craft. This experience was invaluable, inspiring me to start my own venture.",
+  "With a clear vision in mind, I established Brushstrokes, aiming to provide top-notch painting and decorating services that would transform spaces and bring out the unique personality of each client",
+  "Today, I continue to lead our diverse team of professionals, pouring my keen attention to detail, commitment to excellence, and passion for the craft into every project. It&apos;s this ethos and dedication that sets Brushstrokes apart.",
+];
+
+
 
 const AboutPage: React.FC = () => {
   return (
@@ -15,38 +26,31 @@ const AboutPage: React.FC = () => {
       </Head>
       <CommonLanding heading={"About Us"} />
       <Section index={0}>
-        <h3>The AlTech Promise</h3>
-        <p>
-          Altech Painting LLC is an Arizona licensed contractor, ROC#297445,
-          also bonded and insured professional painting service. Who provides
-          professional services to homeowners and businesses owners across the
-          valley in the Phoenix area. From the exterior of your home or business
-          to the interior rooms or surrounding cool decks, no painting project
-          is too large for us! We are committed to providing the highest level
-          of professionalism, service response, and quality workmanship all at
-          an affordable price.
-        </p>
-      </Section>
-      <Section index={1}>
         <div className="max-w-screen-lg m-auto">
-          <h3>Personal Profile</h3>
+          <h3 className="text-2xl font-bold pb-4">The Brushstrokes Promise</h3>
+          <p className="pb-2">
+            Brushstrokes Painting & Decorating offers professional painting and
+            decorating services for residential and commercial clients. With
+            years of industry experience, our skilled team is adept at handling
+            various projects from revamping exteriors, interiors to executing
+            large-scale commercial projects.
+          </p>
           <p>
-            Hello, I am Andy! I am a 2nd generation painter with over 25 years
-            in the professional painting industry as well as 12 years in Epoxy
-            coating. All this experience lead me to starting AlTech Painting and
-            have been continuously delivering top quality work and meeting all
-            my customers needs. I have a personal interest and connection to
-            every project. You do not deal with a middle man, there is no
-            appraiser or estimator. All hoops are eliminated when you work with
-            AlTech! When the phone rings, I will be the one to answer it. My
-            passion for painting leaves each and every job looking flawless and
-            the area clean upon exit. I give me word to all my customers that I
-            will do everything possible to make the result exceed your
-            expectations! I look forward to working with you, please Contact Me
-            if you would like to get started, or view my Gallery to see some of
-            my recent work. Thanks,
+            We pride ourselves on high-quality work and superior customer
+            service. We strive to transform your spaces to reflect your style
+            and personality. With our attention to detail and commitment to
+            quality, we&apos;re your trusted choice for all painting and decorating
+            needs. Trust us to infuse your life with color and style.
           </p>
         </div>
+      </Section>
+      <Section index={1}>
+        <InfoCard
+          title="Personal Profile"
+          content={personalProfile}
+          imageGallery={[ProfilePicture]}
+          invert={true}
+        />
       </Section>
 
       <Section index={2}>

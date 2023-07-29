@@ -3,8 +3,8 @@ import Image from "next/image";
 import residentialImage from "../assets/residential-intro.svg";
 import commercialImage from "../assets/commercial-intro.svg";
 import exteriorImage from "../assets/exterior-intro.svg";
-import { DarkModeContext } from './DarkModeContext';
-import React, { useContext } from 'react';
+import { DarkModeContext } from "./DarkModeContext";
+import React, { useContext } from "react";
 
 const introCards = [
   {
@@ -35,22 +35,19 @@ const IntroCards = () => {
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
   return (
-    <div className="justify-between flex">
+    <div className="justify-between max-md:flex-wrap sm:flex sm:px-5">
       {introCards.map((intro, index) => (
         <div
           key={index}
-          className={`sm:w-full md:w-full lg:w-full px-5 py-20 text-center  border border-gray-300 rounded-lg mb-4 shadow-lg ${darkMode ? 'bg-zinc-700' : 'bg-white'}`}
-          style={{ margin: "0 4px" }} // Add margin here to create spacing
+          className={`sm:mx-1 px-5 py-20 max-md:w-full max-sm:py-10 max-sm:mb-3 text-center border border-gray-300 rounded-lg mb-4 shadow-lg ${
+            darkMode ? "bg-zinc-700" : "bg-white"
+          }`}
+          // Add margin here to create spacing
         >
           <div className="p-3 shadow-lg rounded-full inline-block overflow-hidden mb-5 bg-white">
-            <Image
-              alt={intro.name}
-              src={intro.image}
-              width={60}
-              height={60}
-            />
+            <Image alt={intro.name} src={intro.image} width={60} height={60} />
           </div>
-          <div className="w-full ">
+          <div className="w-full">
             <h3 className="text-2xl font-semibold pb-2">{intro.name}</h3>
             <p className=" pb-5">{intro.comment}</p>
             <Link href={intro.link}>
