@@ -92,19 +92,25 @@ const ServicePage: React.FC = () => {
           content="Welcome to our painting and decorating site"
         />
       </Head>
-      <CommonLanding heading={serviceData.title} />
-      <section className="max-w-screen-lg m-auto py-20">
-        <div className="flex items-center">
-          <div className="w-1/2">
-            {serviceData.paragraph.map((paragraph: string, index: any) => (
-              <p key={index} className="pb-2">{paragraph}</p>
-            ))}
-          </div>
-          <div className="w-1/2">
-            <PhotoGallery images={serviceData.images} />
-          </div>
-        </div>
-      </section>
+      {serviceData && (
+        <>
+          <CommonLanding heading={serviceData.title ?? "Services"} />
+          <section className="max-w-screen-lg m-auto py-20">
+            <div className="flex items-center">
+              <div className="w-1/2">
+                {serviceData.paragraph.map((paragraph: string, index: any) => (
+                  <p key={index} className="pb-2">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+              <div className="w-1/2">
+                <PhotoGallery images={serviceData.images} />
+              </div>
+            </div>
+          </section>
+        </>
+      )}
     </>
   );
 };
