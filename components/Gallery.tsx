@@ -27,7 +27,6 @@ const imageData = [
 // Sample service categories (replace with your actual categories)
 const serviceCategories = ["All", "Exterior", "Interior", "Other"];
 
-
 const Gallery: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [fadeOut, setFadeOut] = useState(false);
@@ -76,7 +75,7 @@ const Gallery: React.FC = () => {
           <button
             key={category}
             onClick={() => handleCategoryClick(category)}
-            className={`px-4 py-2 mx-2 rounded ${
+            className={`px-4 py-2 mx-2 rounded mb-3 ${
               category === selectedCategory
                 ? "bg-primary text-white"
                 : "bg-gray-300 text-black"
@@ -87,13 +86,13 @@ const Gallery: React.FC = () => {
         ))}
       </div>
 
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center">
         {filteredImages.map((image) => (
           <Image
             key={image.id}
             src={image.url}
             alt={image.category}
-            className={`max-w-xs m-2 transform scale-0 transition-all duration-500 ease-in-out hover:scale-200 ${
+            className={`max-w-xs sm:mx-2 mb-3 transform scale-0 transition-all duration-500 ease-in-out hover:scale-200 ${
               fadeOut ? "opacity-0" : "opacity-100"
             }`}            style={{ borderRadius: "8px" }}
             onLoad={(e) => {

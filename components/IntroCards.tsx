@@ -8,11 +8,11 @@ import React, { useContext } from "react";
 
 const introCards = [
   {
-    name: "Residential Painting",
+    name: "Interior Painting",
     comment:
-      "Transform homes with expert residential painting services, bringing your vision to life with flawless finishes.",
+      "Transform homes with expert interior painting services, bringing your vision to life with flawless finishes.",
     image: residentialImage,
-    link: "/services/residential",
+    link: "/services/interior",
   },
   {
     name: "Commercial Painting",

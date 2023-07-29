@@ -1,7 +1,6 @@
 import CommonLanding from "../../components/sections/CommonLanding";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import PhotoGallery from "@/components/PhotoGallery";
 import Example1 from "/assets/example-1.png";
 import Example2 from "/assets/example-2.png";
 import Example3 from "/assets/example-3.png";

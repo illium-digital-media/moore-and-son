@@ -71,7 +71,7 @@ const FAQ: React.FC = () => {
 
   return (
     <div className="max-w-screen-lg m-auto max-lg:px-5">
-      <h3 className="font-bold text-primary text-4xl pb-10 text-center">
+      <h3 className="font-bold  text-4xl pb-10 text-center">
         FAQs
       </h3>
       {faqs.map((item, index) => (
