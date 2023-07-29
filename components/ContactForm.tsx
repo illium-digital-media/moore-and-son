@@ -1,6 +1,5 @@
 import { useState, useRef, ChangeEvent, FormEvent } from "react";
 import Input from "./Input";
-import getConfig from 'next/config'
 
 const ContactForm = () => {
 

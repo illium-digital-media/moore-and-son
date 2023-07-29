@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import commercialBuilding from "../../assets/commercial-building.jpg";
 import exteriorBuilding from "../../assets/home-exterior.jpg";
 import interiorBuilding from "../../assets/painting-interior.jpg";
+import { DarkModeContext } from "../DarkModeContext";
+import React, { useContext } from "react";
 
 interface CardData {
   imageUrl: string;
@@ -14,17 +15,24 @@ interface CardData {
 }
 
 const Card: React.FC<CardData> = ({ imageUrl, heading, text, value, link }) => {
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-lg mx-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+    <div
+      className={`rounded-lg overflow-hidden shadow-lg mx-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 ${
+        darkMode ? "bg-zinc-600" : "bg-white"
+      }`}
+    >
       <Link href={`/services/${value}`}>
         <Image
           src={imageUrl}
           alt="Card"
           className="w-full h-1/2 object-cover"
         />
+
         <div className="p-4 text-center">
           <h3 className="text-xl font-semibold mb-2">{heading}</h3>
-          <p className="text-gray-700">{text}</p>
+          <p className="">{text}</p>
         </div>
       </Link>
     </div>
@@ -58,18 +66,18 @@ const ServicesSection: React.FC = () => {
   ];
 
   return (
-      <div className="flex flex-wrap justify-center">
-        {cards.map((card, index) => (
-          <Card
-            key={index}
-            imageUrl={card.imageUrl}
-            heading={card.heading}
-            value={card.value}
-            text={card.text}
-            link={card.link}
-          />
-        ))}
-      </div>
+    <div className="flex flex-wrap justify-center">
+      {cards.map((card, index) => (
+        <Card
+          key={index}
+          imageUrl={card.imageUrl}
+          heading={card.heading}
+          value={card.value}
+          text={card.text}
+          link={card.link}
+        />
+      ))}
+    </div>
   );
 };
 

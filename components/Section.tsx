@@ -9,7 +9,7 @@ interface SectionProps {
 const Section: React.FC<SectionProps> = ({ children, index }) => {
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
   const bgColorLightMode = index % 2 === 0 ? 'bg-white' : 'bg-gray-200';
-  const bgColorDarkMode = index % 2 === 0 ? 'bg-black' : 'bg-zinc-800';
+  const bgColorDarkMode = index % 2 === 0 ? 'bg-zinc-900' : 'bg-zinc-800';
 
   return (
     <section

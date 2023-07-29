@@ -94,11 +94,11 @@ const ServicePage: React.FC = () => {
       </Head>
       <CommonLanding heading={serviceData.title} />
       <section className="max-w-screen-lg m-auto py-20">
-        <div className="flex">
+        <div className="flex items-center">
           <div className="w-1/2">
             {serviceData.paragraph.map((paragraph: string, index: any) => (
-              <p key={index}>{paragraph}</p>
-            ))}{" "}
+              <p key={index} className="pb-2">{paragraph}</p>
+            ))}
           </div>
           <div className="w-1/2">
             <PhotoGallery images={serviceData.images} />

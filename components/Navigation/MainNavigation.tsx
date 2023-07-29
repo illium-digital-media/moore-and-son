@@ -5,6 +5,7 @@ import Image from "next/image";
 import LogoPlaceholder from "../../assets/logo-placeholder.png";
 import DarkModeToggle from "./DarkModeToggle";
 import PhoneIcon from "../Icons/Phone";
+
 import { DarkModeContext } from '../DarkModeContext';
 import React, { useContext } from 'react';
 
@@ -15,18 +16,16 @@ const navItems = [
   { pageLink: "/gallery", copy: "Gallery" },
   { pageLink: "/contact", copy: "Contact" },
 ];
-const bgColorLightMode = 'bg-white';
-const bgColorDarkMode = 'bg-gray-800';
 
 const MainNavigation: React.FC = () => {
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
   return (
     <header
-      className={`w-full max-lg:shadow-lg max-lg:fixed fixed shadow-lg z-10 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}
+      className={`w-full max-lg:shadow-lg max-lg:fixed fixed shadow-lg z-10 ${darkMode ? 'bg-zinc-800' : 'bg-white'}`}
       style={{ transition: "background-color 0.3s ease" }}
     >
-      <nav className="flex justify-between m-auto max-w-screen-lg max-lg:px-4 max-lg:bg-white">
+      <nav className="flex justify-between m-auto max-w-screen-lg max-lg:px-4">
         <BurgerMenu />
         <div className="py-2">
           <Link href="/">

@@ -64,14 +64,14 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="text-white bg-gray-800">
+    <footer className="text-white bg-zinc-800">
       <div className="max-w-screen-lg m-auto ">
           <div className="flex max-lg:block max-lg:text-center items-start py-10">
             {linkSections.map((section, index) => (
               <FooterLinkSection key={index} title={section.title} links={section.links} />
             ))}
           </div>
-        <div className=" bg-gray-800 text-center">
+        <div className=" text-center">
           <hr />
           <div className="p-2">
             <p className="text-sm">&copy; 2023 Your Website. All Rights Reserved.</p>

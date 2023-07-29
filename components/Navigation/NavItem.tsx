@@ -11,7 +11,7 @@ const NavItem: React.FC<{
   return (
     <li
       className={`p-3 m-auto uppercase text-xs font-bold ${
-        isActive ? "text-primary" : "text-black hover:text-primary"
+        isActive ? "text-primary" : " hover:text-primary"
       } duration-200 relative`}
     >
       <Link href={props.pageLink} onClick={props.handleClick}>

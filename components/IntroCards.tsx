@@ -1,9 +1,10 @@
 import Link from "next/link";
-import React from "react";
 import Image from "next/image";
 import residentialImage from "../assets/residential-intro.svg";
 import commercialImage from "../assets/commercial-intro.svg";
 import exteriorImage from "../assets/exterior-intro.svg";
+import { DarkModeContext } from './DarkModeContext';
+import React, { useContext } from 'react';
 
 const introCards = [
   {
@@ -31,17 +32,19 @@ const introCards = [
 ];
 
 const IntroCards = () => {
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+
   return (
     <div className="justify-between flex">
       {introCards.map((intro, index) => (
         <div
           key={index}
-          className="sm:w-1/2 px-5 py-20 text-center  border border-gray-300 rounded-lg mb-4 shadow-lg"
+          className={`sm:w-full md:w-full lg:w-full px-5 py-20 text-center  border border-gray-300 rounded-lg mb-4 shadow-lg ${darkMode ? 'bg-zinc-700' : 'bg-white'}`}
           style={{ margin: "0 4px" }} // Add margin here to create spacing
         >
-          <div className="p-3 shadow-lg rounded-full inline-block overflow-hidden mb-5">
+          <div className="p-3 shadow-lg rounded-full inline-block overflow-hidden mb-5 bg-white">
             <Image
-              alt="residential"
+              alt={intro.name}
               src={intro.image}
               width={60}
               height={60}
@@ -49,7 +52,7 @@ const IntroCards = () => {
           </div>
           <div className="w-full ">
             <h3 className="text-2xl font-semibold pb-2">{intro.name}</h3>
-            <p className="text-gray-600 pb-5">{intro.comment}</p>
+            <p className=" pb-5">{intro.comment}</p>
             <Link href={intro.link}>
               <button className=" bg-primary text-white p-3 text-xs rounded font-bold uppercase border-2  border-primary mr-2  hover:bg-white hover:text-primary hover:border-primary duration-200">
                 Read More

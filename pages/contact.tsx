@@ -1,6 +1,8 @@
 import ContactForm from "../components/ContactForm";
 import Head from "next/head";
 import CommonLanding from "@/components/sections/CommonLanding";
+import React, { useContext } from "react";
+import { DarkModeContext } from "../components/DarkModeContext";
 
 const contactCardsData = [
   {
@@ -24,6 +26,8 @@ const contactCardsData = [
 ];
 
 const ContactPage: React.FC = () => {
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+
   return (
     <>
       <Head>
@@ -34,9 +38,13 @@ const ContactPage: React.FC = () => {
         />
       </Head>
       <CommonLanding heading={"Contact"} />
-      <section className="py-10 max-sm:px-4">
-        <div className="max-w-screen-lg flex m-auto max-sm:block shadow-lg">
-          <div className="pr-20">
+      <section className="py-10 max-sm:px-4 ">
+        <div
+          className={`max-w-screen-lg rounded-lg flex m-auto max-sm:block shadow-lg ${
+            darkMode ? "bg-zinc-600" : "bg-white"
+          }`}
+        >
+          <div className="p-10 w-1/2">
             <h3 className="f-w-900 text-primary text-4xl font-bold pb-1">
               Say Hi!
             </h3>
@@ -45,8 +53,12 @@ const ContactPage: React.FC = () => {
             </p>
             <ContactForm />
           </div>
-          <div className="bg-primary text-white">
-            AlTech Painting LLC (480) 242-4186 andy@altechpainting.com
+          <div className="bg-primary text-white w-1/2 rounded-r-lg flex items-center p-10">
+            <div className="flex flex-col gap-2">
+              <h3 className="text-4xl font-bold">Example Company Name</h3>
+              <span>Phone Number: 0123 456 789 </span>
+              <span>Email: exampleemail@gmail.com</span>
+            </div>
           </div>
         </div>
       </section>
