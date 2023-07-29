@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import commercialBuilding from "../../assets/commercial-building.jpg";
 import exteriorBuilding from "../../assets/home-exterior.jpg";
@@ -7,7 +7,7 @@ import { DarkModeContext } from "../DarkModeContext";
 import React, { useContext } from "react";
 
 interface CardData {
-  imageUrl: string;
+  imageUrl: StaticImageData;
   heading: string;
   value: string;
   text: string;
