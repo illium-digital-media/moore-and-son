@@ -1,6 +1,7 @@
 import Link from "next/link";
-import Image from 'next/image';
+import Image from "next/image";
 import Check from "../../../assets/check.svg";
+import CheckIcon from "@/components/Icons/Check";
 
 const ResidentialTab: React.FC = () => {
   return (
@@ -12,42 +13,37 @@ const ResidentialTab: React.FC = () => {
       <br />
       <ul className="pb-5">
         <li>
-          <div className="flex center-left pb-1">
-            <Image
-              src={Check}
-              alt=""
-              className="pr-3"
-            />
+          <div className="flex center-left pb-1 items-center">
+            <div className="text-primary pr-2">
+              <CheckIcon />
+            </div>
             <p>Painting of walls and doors,</p>
           </div>
         </li>
         <li>
-          <div className="flex center-left pb-1">
-            <Image
-              src={Check}
-              alt=""
-              className="pr-3"
-            />
-            <p>Repair and painting of window frames and sills,</p>
+          <div className="flex center-left pb-1 items-center">
+            <div className="text-primary pr-2">
+              <CheckIcon />
+            </div>
+
+            <p>Repair and painting of window frames and sills.</p>
           </div>
         </li>
         <li>
-          <div className="flex center-left pb-1">
-            <Image
-              src={Check}
-              alt=""
-              className="pr-3"
-            />
-            <p>General small carpentry jobs,</p>
+          <div className="flex center-left pb-1 items-center">
+            <div className="text-primary pr-2">
+              <CheckIcon />
+            </div>
+
+            <p>General small carpentry jobs.</p>
           </div>
         </li>
         <li>
-          <div className="flex center-left pb-1">
-            <Image
-              src={Check}
-              alt=""
-              className="pr-3"
-            />
+          <div className="flex center-left pb-1 items-center">
+            <div className="text-primary pr-2">
+              <CheckIcon />
+            </div>
+
             <p>Tiling, etc.</p>
           </div>
         </li>

@@ -6,9 +6,10 @@ import Head from "next/head";
 import Section from "@/components/Section";
 import FAQ from "@/components/FAQ";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
+import IntroSection2 from "@/components/sections/IntroSection copy";
 
 const sections = [
-  { Component: IntroSection },
+  { Component: IntroSection2 },
   { Component: WhyChooseUs },
   { Component: TestimonialsSection },
   { Component: AboutUsSection },
