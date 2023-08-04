@@ -1,19 +1,7 @@
-import TestimonialsCards from "../TestimonialsCards";
-import CardSlider from "../TestimonialsSlider";
-import TestimonialsSlider from "../TestimonialsSlider";
+import TestimonialsCards from "../Testimonials/TestimonialsCards";
+import TestimonialsSlider from "../Testimonials/TestimonialsSlider";
+import { testimonials } from "@/data/testimonials";
 
-const generateSampleDataForImageSlider = () => {
-  const data = [];
-  for (let i = 0; i < 10; i++) {
-    data.push({
-      thumbnail: "https://picsum.photos/280",
-      reach: 200000,
-      comment: 11100,
-    });
-  }
-
-  return data;
-};
 const TestimonialsSection: React.FC = () => {
   return (
     <>
@@ -21,14 +9,14 @@ const TestimonialsSection: React.FC = () => {
         <div className="col flex center-left">
           <div className="text-center">
             <h3 className="font-bold text-4xl pb-10">Testimonials</h3>
-            <TestimonialsCards />
+            <TestimonialsCards testimonials={testimonials} />
           </div>
         </div>
       </div>
 
       <div className="sm:hidden text-center">
         <h3 className="font-bold text-4xl pb-10">Testimonials</h3>
-        <CardSlider />
+        <TestimonialsSlider testimonials={testimonials} />
       </div>
     </>
   );
