@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
     {
       title: "Services",
       links: [
-        { href: "/residential", text: "Residential Decorating" },
+        { href: "/interior", text: "Interior Decorating" },
         { href: "/commercial", text: "Commercial Decorating" },
         { href: "/exterior", text: "Exterior Decorating" },
       ],
