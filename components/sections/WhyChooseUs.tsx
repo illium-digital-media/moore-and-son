@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { DarkModeContext } from "../DarkModeContext";
-import GraduationIcon from "../../components/Icons/Graduation";
+import GraduationIcon from "../Icons/Graduation";
 import TickIcon from "../Icons/Tick";
 import HourglassIcon from "../Icons/Hourglass";
 import HeadsetIcon from "../Icons/Headset";

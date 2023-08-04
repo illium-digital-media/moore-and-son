@@ -35,3 +35,12 @@ body.dark-theme {
 body {
   transition: color 0.5s, background-color 1s;
 }
+
+/* styles.css */
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: inherit !important;
+}

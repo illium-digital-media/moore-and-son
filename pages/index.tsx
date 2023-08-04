@@ -3,10 +3,10 @@ import AboutUsSection from "../components/sections/AboutUsSection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import LandingSection from "../components/sections/LandingSection";
 import Head from "next/head";
-import Section from "@/components/Section";
-import FAQ from "@/components/FAQ";
-import WhyChooseUs from "@/components/sections/WhyChooseUs";
-import IntroSection2 from "@/components/sections/IntroSection copy";
+import Section from "../components/Section";
+import FAQ from "../components/FAQ";
+import WhyChooseUs from "../components/sections/WhyChooseUs";
+import IntroSection2 from "../components/sections/IntroSection copy";
 
 const sections = [
   { Component: IntroSection2 },
