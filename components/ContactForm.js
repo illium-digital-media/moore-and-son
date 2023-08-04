@@ -2,7 +2,7 @@ import { useState, useRef, ChangeEvent, FormEvent } from "react";
 import Input from "./Input";
 
 const ContactForm = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false); // State to track form submission
+  const [isSubmitted, setIsSubmitted] = useState(false); 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -36,6 +36,8 @@ const ContactForm = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     }).catch((error) => alert(error));
+    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitted(true); 
   };
 
   return (
@@ -88,7 +90,7 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleChange}
           required
-        ></textarea>
+        />
       </div>
       <button
         className="bg-primary text-white font-bold py-2 px-4 rounded mt-4"
@@ -96,6 +98,12 @@ const ContactForm = () => {
       >
         Submit
       </button>
+      {isSubmitted && (
+        <div className="mt-4 p-2 bg-green-500 text-white rounded">
+          We have received your message and will get back to you shortly!
+        </div>
+      )}
+
     </form>
   );
 };
