@@ -1,8 +1,8 @@
 import InfoCard from "../InfoCard";
-import GetAQuoteButton from "../CTAs/GetAQuoteButton";
 import Example1 from "/assets/example-1.png";
 import Example2 from "/assets/example-2.png";
 import Example3 from "/assets/example-3.png";
+import ContactButton from "../CTAs/ContactButton";
 
 const imageGallery = [Example1, Example2, Example3];
 
@@ -15,7 +15,7 @@ const AboutUsSection: React.FC = () => {
       ]}
       imageGallery={imageGallery}
     >
-      <GetAQuoteButton />
+      <ContactButton />
     </InfoCard>
   );
 };

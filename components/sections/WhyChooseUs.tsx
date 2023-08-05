@@ -16,7 +16,7 @@ const WhyChooseUs: React.FC = () => {
 
       <div className="sm:hidden">
         <h3 className="font-bold text-4xl pb-10 text-center">Why Choose Us</h3>
-          <WhyChooseUsSlider />
+        <WhyChooseUsSlider />
       </div>
     </>
   );

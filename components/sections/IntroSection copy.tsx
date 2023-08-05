@@ -42,6 +42,7 @@ const IntroSection2: React.FC = () => {
             label={tab.label}
             active={activeTab === index}
             onClick={() => changeTab(index)}
+            classes={index === 1 ? 'border-l border-r' : ''}
           />
         ))}
       </div>
