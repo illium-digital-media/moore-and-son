@@ -3,7 +3,8 @@ import Example1 from "../assets/example-1.png";
 import Example2 from "../assets/example-2.png";
 import Example3 from "../assets/example-3.png";
 import Image from "next/image";
-// Sample image data (replace with your actual image data)
+import Slider from "react-slick";
+
 const imageData = [
   {
     id: 1,
@@ -20,11 +21,40 @@ const imageData = [
     url: Example3,
     category: "Other",
   },
-
-  // Add more image objects for other categories
 ];
 
-// Sample service categories (replace with your actual categories)
+var settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  draggable: true,
+  centerMode: true,
+  centerPadding: "30px",
+  arrows: false,
+  variableWidth: true,
+  innerHeight: "40px",
+  // Default is true, but you can explicitly set it here.
+  responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
+
 const serviceCategories = ["All", "Exterior", "Interior", "Other"];
 
 const Gallery: React.FC = () => {
@@ -84,13 +114,13 @@ const Gallery: React.FC = () => {
         ))}
       </div>
 
-      <div className="flex flex-wrap justify-center">
+      <div className="max-sm:hidden flex flex-wrap justify-center">
         {filteredImages.map((image) => (
           <Image
             key={image.id}
             src={image.url}
             alt={image.category}
-            className={`max-w-xs sm:mx-2 mb-3 transform scale-0 transition-all duration-500 ease-in-out hover:scale-200 ${
+            className={`mx-2 mb-3 transform scale-0 transition-all duration-500 ease-in-out hover:scale-200 ${
               fadeOut ? "opacity-0" : "opacity-100"
             }`}
             style={{ borderRadius: "8px" }}
@@ -101,6 +131,28 @@ const Gallery: React.FC = () => {
           />
         ))}
       </div>
+
+        <div className="sm:hidden overflow-x-clip flex flex-col h-full">
+          <Slider {...settings}>
+            {filteredImages.map((image, index) => (
+              <div className="flex flex-wrap px-1" key={index}>
+                <Image
+                  key={image.id}
+                  src={image.url}
+                  alt={image.category}
+                  className={`max-w-xs sm:mx-2 mb-3 transform scale-0 transition-all duration-500 ease-in-out hover:scale-200 ${
+                    fadeOut ? "opacity-0" : "opacity-100"
+                  }`}
+                  style={{ borderRadius: "8px" }}
+                  onLoad={(e) => {
+                    const imgElement = e.target as HTMLImageElement;
+                    imgElement.style.transform = "scale(1)";
+                  }}
+                />{" "}
+              </div>
+            ))}
+          </Slider>
+        </div>
     </section>
   );
 };
