@@ -3,7 +3,6 @@ import Example1 from "../assets/example-1.png";
 import Example2 from "../assets/example-2.png";
 import Example3 from "../assets/example-3.png";
 import Image from "next/image";
-import Slider from "react-slick";
 
 const imageData = [
   {
@@ -31,7 +30,7 @@ var settings = {
   slidesToScroll: 1,
   draggable: true,
   centerMode: true,
-  centerPadding: "30px",
+  centerPadding: "0px",
   arrows: false,
   variableWidth: true,
   innerHeight: "40px",
@@ -114,7 +113,7 @@ const Gallery: React.FC = () => {
         ))}
       </div>
 
-      <div className="max-sm:hidden flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center">
         {filteredImages.map((image) => (
           <Image
             key={image.id}
@@ -132,27 +131,6 @@ const Gallery: React.FC = () => {
         ))}
       </div>
 
-        <div className="sm:hidden overflow-x-clip flex flex-col h-full">
-          <Slider {...settings}>
-            {filteredImages.map((image, index) => (
-              <div className="flex flex-wrap px-1" key={index}>
-                <Image
-                  key={image.id}
-                  src={image.url}
-                  alt={image.category}
-                  className={`max-w-xs sm:mx-2 mb-3 transform scale-0 transition-all duration-500 ease-in-out hover:scale-200 ${
-                    fadeOut ? "opacity-0" : "opacity-100"
-                  }`}
-                  style={{ borderRadius: "8px" }}
-                  onLoad={(e) => {
-                    const imgElement = e.target as HTMLImageElement;
-                    imgElement.style.transform = "scale(1)";
-                  }}
-                />{" "}
-              </div>
-            ))}
-          </Slider>
-        </div>
     </section>
   );
 };
