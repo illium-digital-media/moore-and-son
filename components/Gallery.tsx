@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Example1 from '../assets/example-1.png';
-import Example2 from '../assets/example-2.png';
-import Example3 from '../assets/example-3.png';
-import Image, { StaticImageData } from "next/image";
+import Example1 from "../assets/example-1.png";
+import Example2 from "../assets/example-2.png";
+import Example3 from "../assets/example-3.png";
+import Image from "next/image";
 // Sample image data (replace with your actual image data)
 const imageData = [
   {
@@ -50,7 +50,7 @@ const Gallery: React.FC = () => {
   useEffect(() => {
     // If images are already loaded (during client-side navigation), don't execute this logic again
     if (imagesLoaded) return;
-  
+
     // Wait for all images to load
     const imageElements = document.querySelectorAll("img");
     const promises = Array.from(imageElements).map((img) => {
@@ -59,14 +59,12 @@ const Gallery: React.FC = () => {
         img.onload = () => resolve();
       });
     });
-  
+
     Promise.all(promises).then(() => {
       // Set the imagesLoaded state to true after all images are loaded
       setImagesLoaded(true);
     });
   }, [imagesLoaded]);
-  
-
 
   return (
     <section className="max-w-screen-lg m-auto items-start max-lg:px-4 py-10">
@@ -94,11 +92,13 @@ const Gallery: React.FC = () => {
             alt={image.category}
             className={`max-w-xs sm:mx-2 mb-3 transform scale-0 transition-all duration-500 ease-in-out hover:scale-200 ${
               fadeOut ? "opacity-0" : "opacity-100"
-            }`}            style={{ borderRadius: "8px" }}
+            }`}
+            style={{ borderRadius: "8px" }}
             onLoad={(e) => {
               const imgElement = e.target as HTMLImageElement;
               imgElement.style.transform = "scale(1)";
-            }}     />
+            }}
+          />
         ))}
       </div>
     </section>

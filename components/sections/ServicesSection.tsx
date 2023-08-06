@@ -19,7 +19,7 @@ const Card: React.FC<CardData> = ({ imageUrl, heading, text, value, link }) => {
 
   return (
     <div
-      className={`rounded-lg overflow-hidden shadow-lg mx-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 max-lg:mb-3 ${
+      className={`border border-gray-300 rounded-lg overflow-hidden shadow-lg mx-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 max-lg:mb-3 ${
         darkMode ? "bg-zinc-600" : "bg-white"
       }`}
     >

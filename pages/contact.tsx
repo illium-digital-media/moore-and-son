@@ -20,7 +20,7 @@ const ContactPage: React.FC = () => {
       <CommonLanding heading={"Contact"} />
       <Section index={0} classes={"max-lg:px-3"}>
         <div
-          className={`rounded-lg flex m-auto max-sm:block shadow-lg border border-gray-300  ${
+          className={`max-w-screen-lg rounded-lg flex m-auto max-sm:block shadow-lg border border-gray-300  ${
             darkMode ? "bg-zinc-600" : "bg-white"
           }`}
         >
