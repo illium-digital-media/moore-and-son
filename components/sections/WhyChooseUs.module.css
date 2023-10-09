@@ -1,0 +1,310 @@
+/*-- -------------------------- -->
+<---         Why Choose         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    .section {
+        padding: var(--sectionPadding);
+    }
+    @keyframes floatAnimation2 {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-4px);
+        }
+        70% {
+            transform: translateY(4px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    @keyframes inAndOut {
+        0% {
+            transform: translateY(2.5rem) scale(1);
+            opacity: 1;
+        }
+        30% {
+            transform: translateY(1.25rem) scale(0.8);
+            opacity: 1;
+        }
+        60% {
+            transform: translateY(0.625rem) scale(0.5);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(0rem) scale(0.5);
+            opacity: 0;
+        }
+    }
+    @keyframes inAndOut2 {
+        0% {
+            transform: translateY(3.125rem) scale(1);
+            opacity: 1;
+        }
+        30% {
+            transform: translateY(2.5rem) scale(1);
+            opacity: 1;
+        }
+        60% {
+            transform: translateY(1.25rem) scale(0.6);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(0rem) scale(0.4);
+            opacity: 0;
+        }
+    }
+    .container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: 34.375rem;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* 48px - 56px */
+        gap: clamp(3rem, 7vw, 3.5rem);
+    }
+    .content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+    }
+    .topper {
+        font-size: var(--topperFontSize);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.25rem;
+        display: block;
+    }
+    .title {
+        font-size: var(--headerFontSize);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: 43.75rem;
+        margin: 0 0 1rem 0;
+        color: var(--headerColor);
+        position: relative;
+    }
+    .text {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        max-width: 40.625rem;
+        margin: 0;
+        color: var(--bodyTextColor);
+    }
+    .title {
+        max-width: 20ch;
+    }
+    .text {
+        margin-bottom: 1rem;
+    }
+    .text:last-of-type {
+        margin-bottom: 2rem;
+    }
+    .picture {
+        width: 100%;
+        height: 25rem;
+        border-radius: 1rem;
+        /* clips the corners of rhe image */
+        overflow: hidden;
+        display: block;
+        position: relative;
+    }
+    .picture img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        /* change to "top" if you don't want the top of the image cut off */
+        object-position: center;
+    }
+    .cardGroup {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+    }
+    .item {
+        list-style: none;
+        width: 100%;
+        /* 24px - 32px */
+        padding: clamp(1.5rem, 4.3vw, 2rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        border-radius: 1rem;
+        border: 1px solid #e8e8e8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .iconWrapper {
+        width: 4.0625rem;
+        height: 5rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+    }
+    .iconWrapper:before {
+        /* Small Bubble */
+        content: "";
+        width: 1.125rem;
+        height: 1.125rem;
+        border-radius: 50%;
+        background: #e5f2ff;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0.1875rem;
+        animation-name: inAndOut;
+        animation-duration: 1.6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .iconWrapper:after {
+        /* Small Bubble */
+        content: "";
+        width: 1.125rem;
+        height: 1.125rem;
+        border-radius: 50%;
+        background: #e5f2ff;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: 0.6875rem;
+        right: 0.3125rem;
+        animation-name: inAndOut2;
+        animation-duration: 2s;
+        animation-delay: 0.3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .bubble {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .bubble:before {
+        /* Big Bubble */
+        content: "";
+        width: 2.6875rem;
+        height: 2.6875rem;
+        border-radius: 50%;
+        background: #e5f2ff;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        bottom: 0.25rem;
+        left: 0rem;
+        animation-name: floatAnimation2;
+        animation-duration: 6s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+    .bubble:after {
+        /* Big Bubble */
+        content: "";
+        width: 1.9375rem;
+        height: 1.9375rem;
+        border-radius: 50%;
+        background: #e5f2ff;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        bottom: -0.25rem;
+        right: 0rem;
+        animation-name: floatAnimation2;
+        animation-duration: 4s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+    .icon {
+        width: 3rem;
+        height: auto;
+        position: relative;
+        z-index: 10;
+    }
+    .h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 0.75rem;
+        color: var(--headerColor);
+    }
+    .itemText {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.6vw, 1rem);
+        line-height: 1.5em;
+        text-align: center;
+        margin: 0;
+        color: var(--bodyTextColor);
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    .item {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .iconWrapper {
+        margin-right: 1.5rem;
+    }
+    .h3,
+    .itemText {
+        text-align: left;
+    }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    .container {
+        max-width: 80rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .content {
+        max-width: 32.625rem;
+    }
+    .picture {
+        height: 17.5rem;
+    }
+    .cardGroup {
+        width: 50%;
+        max-width: 39.375rem;
+        /* prevents flexbox from squishing it */
+        flex: none;
+    }
+}
