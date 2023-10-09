@@ -7,7 +7,7 @@ const ServicesPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Services</title>
+        <title>Services | Moore & Son Painting and Decorating</title>
         <meta
           name="description"
           content="Welcome to our painting and decorating site"

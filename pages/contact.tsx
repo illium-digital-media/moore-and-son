@@ -11,7 +11,7 @@ const ContactPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Contact Us</title>
+        <title>Contact Us | Moore & Son Painting and Decorating</title>
         <meta
           name="description"
           content="Welcome to our painting and decorating site"

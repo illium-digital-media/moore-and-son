@@ -18,7 +18,7 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>About Us</title>
+        <title>About Us | Moore & Son Painting and Decorating</title>
         <meta
           name="description"
           content="Welcome to our painting and decorating site"

@@ -1,0 +1,241 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    .footer {
+        padding: var(--sectionPadding);
+        /* 30px - 50px */
+        padding-bottom: clamp(1.875rem, 5vw, 3.125rem);
+        background-color: #1a1a1a;
+        position: relative;
+    }
+    .wave {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        bottom: 99%;
+    }
+    .container {
+        width: 100%;
+        /* reset on tablet */
+        max-width: 34.375rem;
+        margin: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        column-gap: 3rem;
+        row-gap: 2rem;
+    }
+    .logoGroup {
+        /* takes up all the space, lets the other ul's wrap below it */
+        width: 100%;
+        position: relative;
+    }
+    .logo {
+        width: 13.125rem;
+        height: auto;
+        margin: 0 0 1.5rem 0;
+        display: block;
+    }
+    .logoImg {
+        width: 100%;
+        height: auto;
+    }
+    .text {
+        font-size: 1rem;
+        line-height: 1.5em;
+        margin: 0 0 1.5rem 0;
+        max-width: 25rem;
+        color: #bababa;
+    }
+    .social {
+        display: inline-flex;
+        justify-content: flex-start;
+        gap: 0.75em;
+    }
+    .socialLink {
+        width: 2rem;
+        height: 2rem;
+        background-color: #484848;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        transition:
+            transform 0.3s,
+            background-color 0.3s;
+    }
+    .socialLink:hover {
+        background-color: var(--primaryLight);
+        transform: translateY(-0.1875rem);
+    }
+    .socialLink:hover .socialImg {
+        filter: grayscale(1) brightness(1000%);
+    }
+    .socialImg {
+        height: 0.75rem;
+        width: auto;
+        display: block;
+    }
+    .header {
+        font-size: 1.25rem;
+        line-height: 1.5em;
+        font-weight: 700;
+        margin: 0 0 1.25rem 0;
+        color: var(--bodyTextColorWhite);
+        display: block;
+        position: relative;
+    }
+    .ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .ul1 {
+        width: 100%;
+        max-width: 21.875rem;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        column-gap: 2rem;
+    }
+    .ul1 .li {
+        width: 44%;
+    }
+    .li {
+        list-style: none;
+    }
+    .link {
+        font-size: 1rem;
+        text-decoration: none;
+        line-height: 1.5em;
+        text-align: left;
+        color: #bababa;
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        transition: color 0.3s;
+    }
+    .link:hover {
+        color: var(--primaryLight);
+    }
+    .icon {
+        width: 1.25rem;
+        height: auto;
+        margin-right: 0.125rem;
+        display: block;
+    }
+    .bottom {
+        text-align: center;
+        width: 100%;
+        max-width: 80rem;
+        /* 48px - 64px */
+        margin: clamp(3rem, 7vw, 4rem) auto 0;
+        padding-top: 1.5rem;
+        border-top: 1px solid #484848;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+    .credit,
+    .bottomLink,
+    .creditLink {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        width: auto;
+        margin: 0;
+        color: #bababa;
+        display: inline-block;
+        position: relative;
+        transition: color 0.3s;
+    }
+    .credit {
+        width: 100%;
+    }
+    .creditLink {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        text-decoration: none;
+        width: auto;
+        margin: 0;
+        color: #bababa;
+        display: inline-block;
+        position: relative;
+    }
+    .creditLink:hover {
+        color: var(--primary);
+    }
+    .bottomLinks {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bottomLink {
+        display: flex;
+        align-items: center;
+    }
+    .bottomLink:hover {
+        color: var(--primary);
+    }
+    .bottomLink:last-of-type:before {
+        /* separator */
+        content: "";
+        width: 1px;
+        height: 0.875rem;
+        margin: 0 0.75rem;
+        background: currentColor;
+        opacity: 1;
+        display: block;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    .container {
+        max-width: 80rem;
+        /* 48px - 64px */
+        row-gap: clamp(3rem, 7vw, 4rem);
+    }
+    .bottom {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    .credit {
+        text-align: left;
+    }
+    .bottomLinks {
+        justify-content: flex-end;
+    }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    .container {
+        /* pushes all flex children to the top */
+        align-items: flex-start;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+    }
+    .logoGroup {
+        width: 30%;
+        max-width: 25rem;
+        /* pushes everything to the right of it as far as possible in a flexbox */
+        margin-right: auto;
+    }
+    .text {
+        width: 100%;
+    }
+    .social {
+        flex-direction: row;
+        position: relative;
+        top: auto;
+        right: auto;
+    }
+}
