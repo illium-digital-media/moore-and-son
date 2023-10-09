@@ -109,6 +109,7 @@ const Contact = () => {
           name="Contact Form"
           method="post"
           data-netlify="true"
+          netlify
         >
           <h3 className={styles.h3}>Make Appointment</h3>
           <label className={styles.label}>
