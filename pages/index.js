@@ -1,12 +1,12 @@
 import AboutUs from "../components/sections/AboutUs";
 
 import Head from "next/head";
-import Section from "@/components/Section";
-import FAQ from "@/components/FAQ";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import LandingAndServices from "@/components/sections/LandingAndServices";
 import Stats from "../components/sections/Stats";
 import Testimonials from "../components/sections/Testimonials";
+import FAQs from "../components/sections/FAQs";
+import GalleryPreview from "../components/sections/GalleryPreview";
 
 const sections = [];
 
@@ -24,8 +24,9 @@ const HomePage = () => {
       <AboutUs />
       <Stats />
       <WhyChooseUs />
+      <GalleryPreview />
       <Testimonials />
-      <FAQ />
+      <FAQs />
     </>
   );
 };

@@ -1,11 +1,13 @@
 import ContactForm from "../components/ContactForm";
 import Head from "next/head";
 import CommonLanding from "@/components/sections/CommonLanding";
+import Contact from "@/components/sections/Contact";
+
 import React, { useContext } from "react";
 import { DarkModeContext } from "../components/DarkModeContext";
 import Section from "@/components/Section";
 
-const ContactPage: React.FC = () => {
+const ContactPage = () => {
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
   return (
@@ -18,6 +20,7 @@ const ContactPage: React.FC = () => {
         />
       </Head>
       <CommonLanding heading={"Contact"} />
+      <Contact />
       <Section index={0} classes={"max-lg:px-3"}>
         <div
           className={`max-w-screen-lg rounded-lg flex m-auto max-sm:block shadow-lg border border-gray-300  ${
