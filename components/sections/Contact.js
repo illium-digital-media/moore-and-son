@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./Contact.module.css"; // Import your CSS module file
-
+import { useState } from "react";
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-    number: "",
+    phone: "",
   });
 
   const handleChange = (e) => {
@@ -28,7 +28,7 @@ const Contact = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     }).catch((error) => alert(error));
-    setFormData({ name: "", email: "", message: "", number: "" });
+    setFormData({ name: "", email: "", message: "", phone: "" });
     setIsSubmitted(true);
   };
 
@@ -114,21 +114,21 @@ const Contact = () => {
           <label className={styles.label}>
             Name
             <input
-              value={formData.name}
-              handleInputChange={handleChange}
               className={styles.input}
               required
               type="text"
-              id="name-1388"
-              name="name"
+              id="name"
               placeholder="Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
             />
           </label>
           <label className={`${styles.label} ${styles.email}`}>
             Email
             <input
               value={formData.email}
-              handleInputChange={handleChange}
+              onChange={handleChange}
               className={styles.input}
               required
               type="email"
@@ -140,27 +140,27 @@ const Contact = () => {
           <label className={`${styles.label} ${styles.phone}`}>
             Phone
             <input
-              value={formData.number}
-              handleInputChange={handleChange}
+              value={formData.phone}
+              onChange={handleChange}
               className={styles.input}
               required
-              type="number"
+              type="tel" // Change the type to "tel" for phone numbers
               id="phone-1388"
               name="phone"
-              placeholder="Phone"
+              placeholder="Phone" // Update the placeholder text
             />
           </label>
           <label className={styles.label}>
             Message
             <textarea
+              className={`${styles.input} ${styles.textarea}`}
+              id="message"
+              name="message"
+              placeholder="Write message.."
               value={formData.message}
               onChange={handleChange}
-              className={`${styles.input} ${styles.textarea}`}
               required
-              name="Message"
-              id="message-1388"
-              placeholder="Write message..."
-            ></textarea>
+            />
           </label>
           <button
             className={`${styles.buttonSolid} ${styles.submit}`}
