@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from './Stats.module.css'; // Import the CSS module
+import StatsBg from '../../assets/stats-bg.jpg'
+import Image from 'next/image';
 
 const Stats = () => {
     const statsData = [
-        { iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Stats/person2-gold.svg', number: '5840', desc: 'Cleaning Staff' },
-        { iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Stats/mop-gold.svg', number: '3140', desc: 'Projects Completed' },
-        { iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Stats/thumbs-gold.svg', number: '2260', desc: 'Satisfied Clients' },
-        { iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Stats/award2-gold.svg', number: '2365', desc: 'Awards Won' },
+        { iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Stats/person2-gold.svg', number: '50+', desc: 'Years in Business' },
+        { iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Stats/mop-gold.svg', number: '500+', desc: 'Projects Completed' },
+        { iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Stats/thumbs-gold.svg', number: '450+', desc: 'Satisfied Clients' },
+        { iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Stats/award2-gold.svg', number: '85%', desc: 'Repeat Business Rate' },
     ];
 
     return (
@@ -26,9 +28,7 @@ const Stats = () => {
             </ul>
             {/* Background Image */}
             <picture className={styles.background}>
-                <source media="(max-width: 600px)" srcSet="https://csimg.nyc3.digitaloceanspaces.com/Stats/cleaning-products-m.jpg" />
-                <source media="(min-width: 601px)" srcSet="https://csimg.nyc3.digitaloceanspaces.com/Stats/cleaning-products.jpg" />
-                <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/cleaning-products.jpg" alt="cleaning products" width="1920" height="283" />
+                <Image aria-hidden="true" loading="lazy" decoding="async" src={StatsBg} alt="Painting Products" width="1920" height="283" />
             </picture>
         </div>
     );

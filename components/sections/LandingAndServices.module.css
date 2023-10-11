@@ -2,7 +2,7 @@
 @media only screen and (min-width: 0rem) {
     .hero {
       /* 150px - 350px */
-      padding: clamp(9rem, 30.95vw, 21.875rem) 1rem;
+      padding: clamp(9rem, 5vw, 21.875rem) 1rem;
       padding-bottom: 0;
       position: relative;
       margin-bottom: 500px;

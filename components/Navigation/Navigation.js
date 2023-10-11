@@ -2,16 +2,9 @@ import Link from "next/link";
 import React from "react";
 import styles from "./Navigation.module.css";
 import { useEffect } from "react";
+import navigationItems from "../../data/navigation";
 
 const Navigation = () => {
-  const navigationItems = [
-    { text: "Home", link: "/contact" },
-    { text: "About", link: "/about" },
-    { text: "Gallery", link: "/gallery" },
-    { text: "Services", link: "/services" },
-    { text: "Contact", link: "/contact" },
-  ];
-
   const socialLinks = [
     {
       name: "Facebook",

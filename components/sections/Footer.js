@@ -1,16 +1,8 @@
 import React from 'react';
-import styles from './Footer.module.css'; // Import the CSS module
+import styles from './Footer.module.css'; 
+import navigationItems from '../../data/navigation';
 
 const Footer = () => {
-    const quickLinks = [
-        { name: "Home", href: "#" },
-        { name: "About", href: "#" },
-        { name: "Services", href: "#" },
-        { name: "Donations", href: "#" },
-        { name: "Events", href: "#" },
-        { name: "Blog", href: "#" },
-        { name: "Contact", href: "#" },
-    ];
 
     return (
         <footer className={styles.footer}>
@@ -37,9 +29,9 @@ const Footer = () => {
                 <div className={styles.ulWrapper}>
                     <span className={styles.header}>Quick Links</span>
                     <ul className={styles.ul}>
-                        {quickLinks.map((link, index) => (
+                        {navigationItems.map((link, index) => (
                             <li className={styles.li} key={index}>
-                                <a className={styles.link} href={link.href}>{link.name}</a>
+                                <a className={styles.link} href={link.link}>{link.text}</a>
                             </li>
                         ))}
                     </ul>
@@ -70,12 +62,8 @@ const Footer = () => {
             </div>
             <div className={styles.bottom}>
                 <span className={styles.credit}>
-                    © Copyright 2023 <a href="" className={styles.creditLink} target="_blank">Stitch Designs</a> | Powered by: <a href="www.illiumdigitalmedia.com" className={styles.creditLink} target="_blank">Illium Digital Media</a>
+                    © Copyright 2023 | Built by: <a href="https://www.illiumdigitalmedia.com/" className={`text-white ${styles.creditLink}`} target="_blank">Illium Digital Media</a>
                 </span>
-                <div className={styles.bottomLinks}>
-                    <a href="" className={styles.bottomLink}>Privacy Policy</a>
-                    <a href="" className={styles.bottomLink}>Terms Of Use</a>
-                </div>
             </div>
         </footer>
     );

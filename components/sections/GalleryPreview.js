@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./GalleryPreview.module.css";
+import Link from "next/link";
 
 function GalleryPreview() {
   const imageList = [
@@ -33,6 +34,9 @@ function GalleryPreview() {
             </picture>
           ))}
         </div>
+        <button className={styles.buttonSolid}>
+            <Link href="/gallery">View More</Link>
+          </button>
       </div>
     </section>
   );

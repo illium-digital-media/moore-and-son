@@ -7,63 +7,48 @@ const services = [
     iconSrc: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/brain.svg",
     title: "Commercial Painting",
     description:
-      "No commercial job is too big or too small!",
+      "Tackling every commercial project with precision, regardless of scale. Your business, our canvas.",
+    link: "/commercial",
   },
   {
     iconSrc: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/users.svg",
     title: "Interior Painting",
     description:
-      "Moore & Son provides interior painting services to homeowners and business owners located in the Coventry area.",
+      "Elevate your interiors with Moore & Son's meticulous touch. Serving both homeowners and businesses in the Coventry area.",
+    link: "/interior",
   },
   {
     iconSrc: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/Layer.svg",
     title: "Exterior Painting",
     description:
-      "It is very important to regularly maintain the exterior of your property by properly prepping and repainting around every 5-7 years.",
+      "Shield and beautify your property's exterior. Recommended upkeep every 5-7 years for lasting brilliance.",
+    link: "/exterior",
   },
 ];
+
 const LandingAndServices: React.FC = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <span className={styles.topper}>Welcome to Invetex</span>
-          <h1 className={styles.title}>
-            Expert Accountants and Tax Advisors for Your Business
-          </h1>
+          <h1 className={styles.title}>Moore & Son Painting and Decorating</h1>
           <p className={styles.text}>
-            Highly qualified tax consultants with many years of experience in
-            the field offer a full range of services to help you build a
-            financial future.
+            Highly skilled painters and decorators with extensive experience in
+            the industry, we offer a comprehensive suite of services for
+            interiors, exteriors, and commercial spaces. Trust us to redefine
+            and elevate your spaces with impeccable finesse.
           </p>
-          <a href="" className={styles.buttonSolid}>
-            Free Consultation
+          <a href="/contact" className={styles.buttonSolid}>
+            Get A Quote
           </a>
         </div>
-        <picture className={styles.picture}>
-          <source
-            media="(max-width: 600px)"
-            srcSet="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant15.png"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcSet="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant15.png"
-          />
-          <img
-            aria-hidden="true"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant15.png"
-            alt="accountant"
-            width="468"
-            height="658"
-          />
-        </picture>
+
       </div>
       <div className={styles.container}>
         <ul className={styles.cardGroup}>
           {services.map((item, index) => (
             <li className={styles.item} key={index}>
-              <Link href={""}>
+              <Link href={item.link}>
                 <div className={styles.link}>
                   <img
                     className={styles.icon}
@@ -82,15 +67,7 @@ const LandingAndServices: React.FC = () => {
           ))}
         </ul>
       </div>
-      <img
-        className={styles.floater}
-        aria-hidden="true"
-        decoding="async"
-        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/arrow-3.svg"
-        alt="graphic"
-        width="956"
-        height="708"
-      />
+
       <picture className={styles.background}>
         <source
           media="(max-width: 1023px)"
