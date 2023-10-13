@@ -1,74 +1,44 @@
-import React from "react";
-import styles from "./WhyChooseUs.module.css"; // Import the CSS module
+import React from 'react';
+import Topper from '../Topper/Topper';
+import styles from './WhyChooseUs.module.css';
 
 const WhyChooseUs = () => {
-  const cardData = [
+  const items = [
     {
-      iconSrc: "https://csimg.nyc3.digitaloceanspaces.com/SideBySide/person-blue.svg",
-      title: "Skilled Artisans",
-      text: "Our seasoned team has transformed countless spaces, ensuring every project is a unique masterpiece tailored to the client's vision.",
+      iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/award.svg',
+      title: '99% winning guarantee',
+      description: 'Full range of shipping disputes such as charter party disputes, demurrage claims, purchase agreements, trade finance, carriage and claims.',
     },
     {
-      iconSrc: "https://csimg.nyc3.digitaloceanspaces.com/SideBySide/hand-blue.svg",
-      title: "Value-Packed Solutions",
-      text: "Our services offer both quality and affordability, making top-tier painting and decorating accessible to all.",
+      iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/sheild-black.svg',
+      title: 'Secure management',
+      description: 'Full range of shipping disputes such as charter party disputes, demurrage claims, purchase agreements, trade finance, carriage and claims.',
     },
     {
-      iconSrc: "https://csimg.nyc3.digitaloceanspaces.com/SideBySide/stars-thumbs.svg",
-      title: "100% Satisfaction",
-      text: "Our commitment to excellence ensures unmatched customer satisfaction, turning first-time clients into lifelong patrons.",
+      iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/call.svg',
+      title: 'Full time support',
+      description: 'Full range of shipping disputes such as charter party disputes, demurrage claims, purchase agreements, trade finance, carriage and claims.',
     },
   ];
 
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        {/* Left Section */}
         <div className={styles.content}>
-          <span className={styles.topper}>Who We Are</span>
-          <h2 className={styles.title}>
-            Expert Painting & Decorating Service You Can Trust
-          </h2>
+          <div className={styles.flex}>
+            <Topper text='Our Process' />
+            <h2 className={styles.title}>Why You Need the Top Lawyers in O’Connor</h2>
+          </div>
           <p className={styles.text}>
-            At Moore & Son, we bring color and precision to your spaces,
-            allowing you to focus on what you do best. We enhance the ambiance
-            and aesthetic of businesses and homes alike.
+            We’re a financial and consulting business company of professional thinkers, strategists, digital innovators, designers and problem solvers (everyone gets a mention). Our sense of curiosity brings brands to life, gets them talking, and makes sure they’re heard above.
           </p>
-          {/* Image of cleaners */}
-          <picture className={styles.picture}>
-            <img
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaners.jpg"
-              alt="cleaners"
-              width="275"
-              height="132"
-            />
-          </picture>
         </div>
-        {/* Cards */}
         <ul className={styles.cardGroup}>
-          {cardData.map((card, index) => (
+          {items.map((item, index) => (
             <li className={styles.item} key={index}>
-              <div className={styles.iconWrapper}>
-                <img
-                  className={styles.icon}
-                  aria-hidden="true"
-                  loading="lazy"
-                  decoding="async"
-                  src={card.iconSrc}
-                  alt="icon"
-                  width="48"
-                  height="48"
-                />
-                {/* Create a span to make more bubbles with pseudo elements */}
-                <span className={styles.bubble} aria-hidden="true"></span>
-              </div>
-              <div className={styles.flex}>
-                <h3 className={styles.h3}>{card.title}</h3>
-                <p className={styles.itemText}>{card.text}</p>
-              </div>
+              <img className={styles.icon} aria-hidden="true" loading="lazy" decoding="async" src={item.iconSrc} alt="icon" width="48" height="48" />
+              <h3 className={styles.h3}>{item.title}</h3>
+              <p className={styles.itemText}>{item.description}</p>
             </li>
           ))}
         </ul>

@@ -16,6 +16,6 @@ export const galleryPhotos = [
     {
       id: 3,
       url: Example3,
-      category: "Other",
+      category: "Commercial",
     },
   ];

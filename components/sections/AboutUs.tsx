@@ -1,7 +1,9 @@
-// AboutUs.jsx
-import Link from "next/link";
 import React from "react";
+import Title from "../Title/Title";
+import Topper from "../Topper/Topper";
 import styles from "./AboutUs.module.css";
+import Link from "next/link";
+import Button from "../Button/Button";
 
 const AboutUs = () => {
   return (
@@ -23,13 +25,13 @@ const AboutUs = () => {
             decoding="async"
             src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/room.jpg"
             alt="room"
-            width="494"
-            height="700"
+            width="618"
+            height="537"
           />
         </picture>
         <div className={styles.content}>
-          <span className={styles.topper}>What We Do</span>
-          <h2 className={styles.title}>Painters and Decorators In Coventry</h2>
+          <Topper text="What We Do" color="white" />
+          <Title title="Painters and Decorators In Coventry" color="white" />
           <p className={styles.text}>
             Founded in Coventry over 50 years ago, Moore & Son is a testament to
             the transformative power of color and design. Our seasoned team
@@ -43,9 +45,7 @@ const AboutUs = () => {
             just painting walls. Discover the Moore & Son difference and let us
             redefine your spaces.
           </p>
-          <button className={styles.buttonSolid}>
-            <Link href="/contact">Get Free Quote</Link>
-          </button>
+          <Button link="/about" text="More" bgColor="white" textColor="black"/>
         </div>
       </div>
     </section>

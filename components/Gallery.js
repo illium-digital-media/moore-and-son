@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { galleryPhotos } from "@/data/gallery";
 
-const serviceCategories = ["All", "Exterior", "Interior", "Other"];
+const serviceCategories = ["All", "Exterior", "Interior", "Commercial"];
 
-const Gallery: React.FC = () => {
+const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [fadeOut, setFadeOut] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(false);
@@ -16,7 +16,7 @@ const Gallery: React.FC = () => {
       : galleryPhotos.filter((image) => image.category === selectedCategory);
 
   // Handle category button clicks
-  const handleCategoryClick = (category: string) => {
+  const handleCategoryClick = (category) => {
     setFadeOut(true);
     setTimeout(() => {
       setSelectedCategory(category);
@@ -31,14 +31,13 @@ const Gallery: React.FC = () => {
     // Wait for all images to load
     const imageElements = document.querySelectorAll("img");
     const promises = Array.from(imageElements).map((img) => {
-      return new Promise<void>((resolve) => {
+      return new Promise((resolve) => {
         if (img.complete) resolve();
         img.onload = () => resolve();
       });
     });
 
     Promise.all(promises).then(() => {
-      // Set the imagesLoaded state to true after all images are loaded
       setImagesLoaded(true);
     });
   }, [imagesLoaded]);
@@ -50,10 +49,10 @@ const Gallery: React.FC = () => {
           <button
             key={category}
             onClick={() => handleCategoryClick(category)}
-            className={`px-4 py-2 mx-2 rounded mb-3 ${
+            className={`px-4 py-2 mx-2 mb-3 ${
               category === selectedCategory
-                ? "bg-primary text-white"
-                : "bg-gray-300 text-black"
+                ? " text-primary"
+                : " text-black hover:text-primary"
             }`}
           >
             {category}
@@ -70,9 +69,8 @@ const Gallery: React.FC = () => {
             className={`max-w-xs mx-2 mb-3 transform scale-0 transition-all duration-500 ease-in-out hover:scale-200 ${
               fadeOut ? "opacity-0" : "opacity-100"
             }`}
-            style={{ borderRadius: "8px" }}
             onLoad={(e) => {
-              const imgElement = e.target as HTMLImageElement;
+              const imgElement = e.target;
               imgElement.style.transform = "scale(1)";
             }}
           />

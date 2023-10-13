@@ -1,12 +1,13 @@
 import AboutUs from "../components/sections/AboutUs";
-
 import Head from "next/head";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
-import LandingAndServices from "@/components/sections/LandingAndServices";
 import Stats from "../components/sections/Stats";
 import Testimonials from "../components/sections/Testimonials";
+import LandingCenter from "../components/LandingCenter/LandingCenter";
 import FAQs from "../components/sections/FAQs";
 import GalleryPreview from "../components/sections/GalleryPreview";
+import Services from "../components/sections/Services";
+import Contact from "../components/sections/Contact";
 
 const sections = [];
 
@@ -20,13 +21,14 @@ const HomePage = () => {
           content="Welcome to our painting and decorating site"
         />
       </Head>
-      <LandingAndServices />
+      <LandingCenter />
+      <Services />
       <AboutUs />
       <Stats />
       <WhyChooseUs />
       <GalleryPreview />
       <Testimonials />
-      <FAQs />
+      <Contact />
     </>
   );
 };

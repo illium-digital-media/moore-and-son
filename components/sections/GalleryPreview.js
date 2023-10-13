@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./GalleryPreview.module.css";
 import Link from "next/link";
+import Topper from "../Topper/Topper";
 
 function GalleryPreview() {
   const imageList = [
@@ -15,7 +16,7 @@ function GalleryPreview() {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <span className={styles.topper}>Our Portfolio</span>
+          <Topper text="Our Portfolio" />
           <h2 className={styles.title}>Our Photo Gallery</h2>
         </div>
         <div className={styles.gallery}>

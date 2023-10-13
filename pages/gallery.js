@@ -2,7 +2,7 @@ import CommonLanding from "../components/sections/CommonLanding";
 import Head from "next/head";
 import Gallery from "@/components/Gallery";
 
-const ResidentialPage: React.FC = () => {
+const ResidentialPage = () => {
   return (
     <>
       <Head>

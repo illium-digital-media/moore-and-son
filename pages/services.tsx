@@ -1,6 +1,6 @@
 import CommonLanding from "../components/sections/CommonLanding";
 import Head from "next/head";
-import ServicesSection from "@/components/sections/ServicesSection";
+import ServicesPreview from "@/components/sections/ServicesPreview";
 import Services from "../components/Section";
 
 const ServicesPage: React.FC = () => {
@@ -14,9 +14,7 @@ const ServicesPage: React.FC = () => {
         />
       </Head>
       <CommonLanding heading={"Services"} />
-      <Services index={0}>
-        <ServicesSection />
-      </Services>
+        <ServicesPreview />
     </>
   );
 };

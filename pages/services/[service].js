@@ -6,21 +6,12 @@ import Example2 from "/assets/example-2.png";
 import Example3 from "/assets/example-3.png";
 
 import { StaticImageData } from "next/image";
-import InfoCard from "@/components/InfoCard";
+import Service from "@/components/Service";
 import Section from "@/components/Section";
 
-interface ServiceData {
-  title: string;
-  paragraph: string[];
-  images: string[] | StaticImageData[];
-}
-
-interface ServicesData {
-  [id: string]: ServiceData;
-}
-
-const servicesData: ServicesData = {
+const servicesData = {
   commercial: {
+    topper: "Commercial",
     title: "Commercial Painting",
     paragraph: [
       "No commercial job is too big or too small! We offer professional commercial painting services to enhance the appearance and protection of your business property.",
@@ -31,18 +22,8 @@ const servicesData: ServicesData = {
     ],
     images: [Example1, Example2, Example3],
   },
-  epoxy: {
-    title: "Epoxy Coating",
-    paragraph: [
-      "Epoxy and polyurethane are great for protecting your floor against stains, damage, chemicals, oils, and wear.",
-      "We provide high-quality epoxy coating services for both residential and commercial properties.",
-      "Our epoxy coatings are durable, long-lasting, and available in a wide range of colors and finishes.",
-      "Whether you want to protect your garage floor, industrial space, or retail area, our epoxy coatings will enhance the durability and aesthetics of the surface.",
-      "Our team of professionals will prepare the surface properly and apply the epoxy coating with precision to ensure a seamless and attractive finish.",
-    ],
-    images: [Example1, Example2, Example3],
-  },
   interior: {
+    topper: "Interior",
     title: "Interior Painting",
     paragraph: [
       "Transform your living spaces into elegant and inviting sanctuaries with our exceptional interior painting services. At [Company Name], we take immense pride in our meticulous attention to detail and passion for delivering unparalleled results. Our team of skilled painters is dedicated to enhancing the beauty and ambiance of your home, providing you with a stunning space that reflects your unique style and personality.",
@@ -55,6 +36,7 @@ const servicesData: ServicesData = {
     images: [Example1, Example2, Example3],
   },
   exterior: {
+    topper: "Exterior",
     title: "Exterior Painting",
     paragraph: [
       "It is very important to regularly maintain the exterior of your property by properly prepping and repainting around every 5-7 years.",
@@ -68,10 +50,10 @@ const servicesData: ServicesData = {
   },
 };
 
-const ServicePage: React.FC = () => {
+const ServicePage = () => {
   const router = useRouter();
   const serviceId = router.query.service;
-  const serviceData = servicesData[serviceId as keyof ServicesData];
+  const serviceData = servicesData[serviceId];
 
   return (
     <>
@@ -85,13 +67,12 @@ const ServicePage: React.FC = () => {
       {serviceData && (
         <>
           <CommonLanding heading={serviceData.title ?? "Services"} />
-          <Section index={0}>
-            <InfoCard
-              title={serviceData.title}
-              content={serviceData.paragraph}
-              imageGallery={serviceData.images}
-            />
-          </Section>
+          <Service
+            topper={serviceData.topper}
+            title={serviceData.title}
+            content={serviceData.paragraph}
+            imageGallery={serviceData.images}
+          />
         </>
       )}
     </>

@@ -11,19 +11,12 @@ const Footer = () => {
                     <a aria-label="Go back to home" className={styles.logo} href="">
                         <img className={styles.logoImg} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Footer/logo-light.svg" alt="logo" width="240" height="32" />
                     </a>
-                    <p className={styles.text}>
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin Richard Latin professor at Hampden. Lorem Ipsum is not simply random text.
-                    </p>
+
                     <div className={styles.social}>
                         <a className={styles.socialLink} aria-label="Visit Facebook profile" href="">
                             <img className={styles.socialImg} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fface-grey1.svg" alt="Facebook" width="11" height="11" />
                         </a>
-                        <a className={styles.socialLink} aria-label="Visit Twitter profile" href="">
-                            <img className={styles.socialImg} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Finstragm-grey3.svg" alt="Twitter" width="6" height="11" />
-                        </a>
-                        <a className={styles.socialLink} aria-label="Visit Instagram profile" href="">
-                            <img className={styles.socialImg} aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Ftwitter-grey1.svg" alt="Instagram" width="11" height="11" />
-                        </a>
+       
                     </div>
                 </div>
                 <div className={styles.ulWrapper}>
