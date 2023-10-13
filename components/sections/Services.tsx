@@ -9,8 +9,6 @@ import Paintbrush from "../Icons/Paintbrush";
 import Skyscraper from "../Icons/Skyscraper";
 import Wallpaper from "../Icons/Wallpaper";
 
-
-
 const servicesData = [
   {
     icon: <Paintbrush />,

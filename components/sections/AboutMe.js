@@ -28,8 +28,8 @@ const AboutMe = () => {
           </picture>
         </div>
         <div className={styles.content}>
-            <Topper text="What We Do" />
-            <Title title="House Painting Contractors For Oak Harbor" />
+            <Topper text="About Me" />
+            <Title title="Coventry's Go-To Painter" />
 
           <p className={styles.text}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -43,9 +43,6 @@ const AboutMe = () => {
             cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum
           </p>
-          <a href="" className={styles.buttonSolid}>
-            Get Free Quote
-          </a>
         </div>
       </div>
     </section>

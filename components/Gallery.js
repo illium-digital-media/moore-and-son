@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { galleryPhotos } from "@/data/gallery";
+import styles from "./Gallery.module.css";
+import Topper from "./Topper/Topper";
 
 const serviceCategories = ["All", "Exterior", "Interior", "Commercial"];
 
@@ -44,20 +46,26 @@ const Gallery = () => {
 
   return (
     <section className="max-w-screen-lg m-auto items-start max-lg:px-4 py-10">
-      <div className="text-center">
-        {serviceCategories.map((category) => (
-          <button
-            key={category}
-            onClick={() => handleCategoryClick(category)}
-            className={`px-4 py-2 mx-2 mb-3 ${
-              category === selectedCategory
-                ? " text-primary"
-                : " text-black hover:text-primary"
-            }`}
-          >
-            {category}
-          </button>
-        ))}
+      <div className={`pb-4 ${styles.content}`}>
+        <div className={styles.flex}>
+          <Topper text="Gallery" />
+          <h2 className={styles.title}>Some of Our Best Work</h2>
+        </div>
+        <div className="text-center">
+          {serviceCategories.map((category) => (
+            <button
+              key={category}
+              onClick={() => handleCategoryClick(category)}
+              className={`px-4 py-2 mx-2 mb-3 ${
+                category === selectedCategory
+                  ? " text-primary"
+                  : " text-black hover:text-primary"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="flex flex-wrap justify-center">
@@ -76,7 +84,6 @@ const Gallery = () => {
           />
         ))}
       </div>
-
     </section>
   );
 };

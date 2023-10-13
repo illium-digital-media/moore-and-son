@@ -4,30 +4,15 @@ import Topper from "../Topper/Topper";
 import styles from "./AboutUs.module.css";
 import Link from "next/link";
 import Button from "../Button/Button";
+import Image from "next/image";
+import Van from "../../assets/van.jpg";
 
 const AboutUs = () => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <picture className={styles.picture}>
-          {/* Mobile Image */}
-          <source
-            media="(max-width: 600px)"
-            srcSet="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/room.jpg"
-          />
-          {/* Tablet and above Image */}
-          <source
-            media="(min-width: 601px)"
-            srcSet="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/room.jpg"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/room.jpg"
-            alt="room"
-            width="618"
-            height="537"
-          />
+          <Image src={Van.src} alt="room" width="618" height="537" />
         </picture>
         <div className={styles.content}>
           <Topper text="What We Do" color="white" />
@@ -45,7 +30,7 @@ const AboutUs = () => {
             just painting walls. Discover the Moore & Son difference and let us
             redefine your spaces.
           </p>
-          <Button link="/about" text="More" bgColor="white" textColor="black"/>
+          <Button link="/about" text="More" bgColor="white" textColor="black" />
         </div>
       </div>
     </section>
