@@ -224,9 +224,7 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    .section {
-        padding-bottom: 0;
-    }
+
     .content {
         flex-direction: row;
         justify-content: space-between;

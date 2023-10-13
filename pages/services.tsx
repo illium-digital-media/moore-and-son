@@ -14,7 +14,7 @@ const ServicesPage: React.FC = () => {
         />
       </Head>
       <CommonLanding heading={"Services"} />
-        <ServicesPreview />
+      <ServicesPreview />
     </>
   );
 };

@@ -54,7 +54,7 @@ const Services = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <Topper text="What We Do" color="white" />
-          <Title title="House Painting Services" color="white" />
+          <Title title="Painting and Decorating Services" color="white" />
         </div>
         <ul className={styles.cardGroup}>
           {servicesData.map((service, index) => (

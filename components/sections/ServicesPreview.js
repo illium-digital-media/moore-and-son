@@ -8,25 +8,24 @@ import Topper from "../Topper/Topper";
 import Title from "../Title/Title";
 
 const ServicesPreview = () => {
-
   const services = [
     {
       title: "Commercial Painting",
       text: "No commercial job is too big or too small!",
       imageSrc: commercialBuilding,
-      link: '/services/commercial'
+      link: "/services/commercial",
     },
     {
       title: "Interior Painting",
       text: "Altech provides interior painting services to homeowners and business owners located in the Phoenix valley area.",
       imageSrc: interiorBuilding,
-      link: '/services/interior'
+      link: "/services/interior",
     },
     {
       title: "Exterior Painting",
       text: "It is very important to regularly maintain the exterior of your property by properly prepping and repainting around every 5-7 years.",
       imageSrc: exteriorBuilding,
-      link: '/services/exterior'
+      link: "/services/exterior",
     },
   ];
 
@@ -39,8 +38,8 @@ const ServicesPreview = () => {
             <Title title="Our Popular Services" />
           </div>
           <p className={styles.text}>
-            In the new era of technology, we look into the future with certainty
-            and for any post types, or just they are so much great of all to a program.
+            Discover the range of specialized painting and decorating solutions
+            we offer, tailored to meet your every need.
           </p>
         </div>
         <ul className={styles.cardGroup}>
@@ -60,7 +59,6 @@ const ServicesPreview = () => {
                   aria-hidden="true"
                 />
               </picture>
- 
             </li>
           ))}
         </ul>

@@ -12,8 +12,9 @@ const Service = (props) => {
         <Topper text={props.topper} />
         <Title title={props.title} />
         <p className={styles.text}>
-          {props.content[0]}
+          {props.content}
         </p>
+        
         <button className={styles.buttonSolid}>
           <Link href='/contact'>
             Get a Quote

@@ -11,12 +11,12 @@ const LandingCenter = () => {
       <div className={`w-full m-auto relative ${styles.csContainer}`}>
         <div className={styles.csFlexGroup}>
           <h1 className={styles.csTitle}>
-            Moore & Son Painting and Decorating
+            Coventry's Premier Painters and Decorators
           </h1>
           <p className={styles.csText}>
             Expert painters and decorators offering a wide range of services for
             interiors, exteriors, and commercial spaces. Elevate your spaces
-            with our unmatched precision.{" "}
+            with our unmatched precision.
           </p>
           <button className={styles.csButtonSolid}>
             <Link href="/contact">Get a Quote</Link>
