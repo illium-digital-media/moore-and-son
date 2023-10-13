@@ -3,6 +3,8 @@ import styles from "./Navigation.module.css";
 import navigationItems from "../../data/navigation";
 import Link from "next/link";
 import Button from "../Button/Button";
+import Logo from '../../assets/logo.png';
+import Image from "next/image";
 
 const Navigation = () => {
   return (
@@ -11,17 +13,8 @@ const Navigation = () => {
         className={`w-full p-4 flex items-center justify-end ${styles.container}`}
       >
         {/* Nav Logo */}
-        <Link href="/" aria-label="back to home">
-          
-          <img
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Logos/mechanic-logo.svg"
-            alt="logo"
-            width="197"
-            height="43"
-            aria-hidden="true"
-            decoding="async"
-            className={styles.logo}
-          />
+        <Link href="/" className={styles.logo} aria-label="back to home">
+          <Image src={Logo} width={100} height={100}/>
         </Link>
         {/* Navigation List */}
         <nav className={styles.nav} role="navigation">

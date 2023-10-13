@@ -6,18 +6,18 @@ const WhyChooseUs = () => {
   const items = [
     {
       iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/award.svg',
-      title: '99% winning guarantee',
-      description: 'Full range of shipping disputes such as charter party disputes, demurrage claims, purchase agreements, trade finance, carriage and claims.',
+      title: 'Skilled Artisans',
+      description: 'Our seasoned team has transformed countless spaces, ensuring every project is a unique masterpiece tailored to the client\'s vision.',
     },
     {
       iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/sheild-black.svg',
-      title: 'Secure management',
-      description: 'Full range of shipping disputes such as charter party disputes, demurrage claims, purchase agreements, trade finance, carriage and claims.',
+      title: 'Value-Packed Solutions',
+      description: 'Our services offer both quality and affordability, making top-tier painting and decorating accessible to all.',
     },
     {
       iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/call.svg',
-      title: 'Full time support',
-      description: 'Full range of shipping disputes such as charter party disputes, demurrage claims, purchase agreements, trade finance, carriage and claims.',
+      title: '100% Satisfaction',
+      description: 'Our commitment to excellence ensures unmatched customer satisfaction, turning first-time clients into lifelong patrons.',
     },
   ];
 
@@ -26,11 +26,11 @@ const WhyChooseUs = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.flex}>
-            <Topper text='Our Process' />
-            <h2 className={styles.title}>Why You Need the Top Lawyers in O’Connor</h2>
+            <Topper text='Why Choose Us' />
+            <h2 className={styles.title}>Expert Painting & Decorating Service You Can Trust</h2>
           </div>
           <p className={styles.text}>
-            We’re a financial and consulting business company of professional thinkers, strategists, digital innovators, designers and problem solvers (everyone gets a mention). Our sense of curiosity brings brands to life, gets them talking, and makes sure they’re heard above.
+          At Moore & Son, we bring color and precision to your spaces, allowing you to focus on what you do best. We enhance the ambiance and aesthetic of businesses and homes alike.
           </p>
         </div>
         <ul className={styles.cardGroup}>
