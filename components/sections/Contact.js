@@ -17,7 +17,7 @@ function Contact() {
           <Title title="Get in Touch" />
           <p className={styles.text}>
             Have questions or a project in mind? Reach out to the dedicated team
-            at Moore and Son. We're here to discuss your vision, offer insights,
+            at Moore and Son. We&apos;re here to discuss your vision, offer insights,
             and bring your ideas to vibrant life. Your next transformation is
             just a conversation away.
           </p>

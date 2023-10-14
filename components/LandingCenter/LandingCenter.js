@@ -11,7 +11,7 @@ const LandingCenter = () => {
       <div className={`w-full m-auto relative ${styles.csContainer}`}>
         <div className={styles.csFlexGroup}>
           <h1 className={styles.csTitle}>
-            Coventry's Premier Painters and Decorators
+            Coventry&apos;s Premier Painters and Decorators
           </h1>
           <p className={styles.csText}>
             Expert painters and decorators offering a wide range of services for
