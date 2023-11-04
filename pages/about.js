@@ -10,7 +10,7 @@ const AboutPage = () => {
         <title>About Us | Moore & Son Painting and Decorating</title>
         <meta
           name="description"
-          content="Welcome to our painting and decorating site"
+          content="Meet Wayne of Moore and Son, where a father's legacy of craftsmanship shapes every meticulous project in Coventry. Experience direct, personal service and see how a decade of painting passion translates into superior quality for your space. Discover our story of commitment to excellence."
         />
       </Head>
       <CommonLanding heading={"About Us"} />

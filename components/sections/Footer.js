@@ -61,7 +61,7 @@ const Footer = () => {
                   width="20"
                   height="20"
                 />
-                M-F 7am – 3pm
+                Everyday 7am – 7pm
               </a>
             </li>
             <li className={styles.li}>
@@ -103,15 +103,16 @@ const Footer = () => {
       <div className={styles.bottom}>
         <span className={styles.credit}>
           <div className="text-center">
-            © Copyright 2023 | Built by:
+            © Copyright 2023 | Built by:{" "}
             <a
               href="https://www.illiumdigitalmedia.com/"
               className={`text-white ${styles.creditLink}`}
               target="_blank"
             >
-              <span> Illium Digital Media</span>
+              <span className="text-white hover:text-primary duration-300">Illium Digital Media</span>
             </a>
           </div>
+
         </span>
       </div>
     </footer>

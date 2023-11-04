@@ -3,14 +3,14 @@ import styles from "./GalleryPreview.module.css";
 import Link from "next/link";
 import Topper from "../Topper/Topper";
 import Image from "next/image";
-import photo1 from "../../assets/photo1.jpg";
-import photo2 from "../../assets/photo2.jpg";
-import photo3 from "../../assets/photo3.jpg";
-import photo4 from "../../assets/photo4.jpg";
-import photo5 from "../../assets/photo5.jpg";
+import interior1 from "../../assets/interior7.jpeg";
+import exterior from "../../assets/exterior4.jpeg";
+import commercial1 from "../../assets/commercial2.jpeg";
+import interior2 from "../../assets/interior8.jpeg";
+import exterior2 from "../../assets/exterior5.jpeg";
 
 function GalleryPreview() {
-  const imageList = [photo1, photo2, photo3, photo4, photo5];
+  const imageList = [interior1, exterior, commercial1, interior2, exterior2];
 
   return (
     <section className={styles.section}>

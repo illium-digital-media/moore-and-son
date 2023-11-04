@@ -4,7 +4,7 @@ import { galleryPhotos } from "@/data/gallery";
 import styles from "./Gallery.module.css";
 import Topper from "./Topper/Topper";
 
-const serviceCategories = ["All", "Exterior", "Interior", "Commercial"];
+const serviceCategories = ["All", "Exterior", "Interior"];
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -67,14 +67,16 @@ const Gallery = () => {
           ))}
         </div>
       </div>
-
       <div className="flex flex-wrap justify-center">
-        {filteredImages.map((image) => (
+        {filteredImages.map((image, index) => (
           <Image
-            key={image.id}
+            key={index}
             src={image.url}
             alt={image.category}
-            className={`max-w-xs mx-2 mb-3 transform scale-0 transition-all duration-500 ease-in-out hover:scale-200 ${
+            width={305}
+            height={100}
+            style={{ height: '400px' }} // Set the height inline
+            className={`w-full max-w-xs mx-2 mb-3 transform scale-0 transition-all duration-500 ease-in-out hover:scale-200 ${
               fadeOut ? "opacity-0" : "opacity-100"
             }`}
             onLoad={(e) => {

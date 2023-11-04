@@ -3,14 +3,14 @@ import React from "react";
 import Title from "../Title/Title";
 import Topper from "../Topper/Topper";
 import styles from "./Contact.module.css";
-import photo6 from "../../assets/photo6.jpg";
+import interior1 from "../../assets/interior1.jpeg";
 
 function Contact() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <picture className={styles.picture}>
-          <Image src={photo6.src} alt="kitchen" width="610" height="425" />
+          <Image src={interior1.src} alt="kitchen" width="610" height="425" />
         </picture>
         <div className={styles.content}>
           <Topper text="Contact Us" />

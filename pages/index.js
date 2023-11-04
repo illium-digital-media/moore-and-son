@@ -18,7 +18,7 @@ const HomePage = () => {
         <title>Moore & Son Painting and Decorating</title>
         <meta
           name="description"
-          content="Welcome to our painting and decorating site"
+          content="Discover Moore and Son's professional painting services for homes and businesses in Coventry. Expert craftsmanship, attention to detail, and dedicated customer service. Click to elevate your space!"
         />
       </Head>
       <LandingCenter />

@@ -5,7 +5,7 @@ import styles from "./AboutUs.module.css";
 import Link from "next/link";
 import Button from "../Button/Button";
 import Image from "next/image";
-import Van from "../../assets/van.jpg";
+import Van from "../../assets/van.jpeg";
 
 const AboutUs = () => {
   return (
@@ -18,7 +18,7 @@ const AboutUs = () => {
           <Topper text="What We Do" color="white" />
           <Title title="Painters and Decorators In Coventry" color="white" />
           <p className={styles.text}>
-            Founded in Coventry over 50 years ago, Moore & Son is a testament to
+            Founded in Coventry over 15 years ago, Moore & Son is a testament to
             the transformative power of color and design. Our seasoned team
             excels in marrying traditional techniques with contemporary
             aesthetics, ensuring every wall we touch is a canvas echoing

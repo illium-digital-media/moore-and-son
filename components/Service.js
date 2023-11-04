@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './Service.module.css';
 import Title from './Title/Title';
 import Topper from './Topper/Topper';
+import Image from 'next/image';
 
 const Service = (props) => {
   return (
@@ -24,40 +25,28 @@ const Service = (props) => {
       <div className={styles.imageGroup}>
         {/* Large Image */}
         <picture className={`${styles.picture} ${styles.pictureLarge}`}>
-          <source
+          {/* <source
             media="(max-width: 600px)"
             srcSet="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lab1-m.jpg"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcSet="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lab1.jpg"
-          />
-          <img
+          /> */}
+          <Image
             aria-hidden="true"
             loading="lazy"
             decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lab1.jpg"
-            alt="lab"
+            src={props.images[1]}
+            alt="painting and decorating work"
             width="334"
             height="380"
           />
         </picture>
         {/* Small Image */}
         <picture className={`${styles.picture} ${styles.pictureSmall}`}>
-          <source
-            media="(max-width: 600px)"
-            srcSet="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lab2.jpg"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcSet="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lab2.jpg"
-          />
-          <img
+          <Image
             aria-hidden="true"
             loading="lazy"
             decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lab2.jpg"
-            alt="lab"
+            src={props.images[0]}
+            alt="painting and decorating work"
             width="183"
             height="158"
           />

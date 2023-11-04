@@ -16,7 +16,7 @@ const ContactPage = () => {
         <title>Contact Us | Moore & Son Painting and Decorating</title>
         <meta
           name="description"
-          content="Welcome to our painting and decorating site"
+          content="Contact Moore and Son for top-tier painting services in Coventry. Get in touch today for a consultation and see how we can make your painting project a reality with unparalleled quality and service."
         />
       </Head>
       <CommonLanding heading={"Contact"} />

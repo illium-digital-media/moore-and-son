@@ -10,7 +10,7 @@ const ServicesPage: React.FC = () => {
         <title>Services | Moore & Son Painting and Decorating</title>
         <meta
           name="description"
-          content="Welcome to our painting and decorating site"
+          content="Explore our range of painting services at Moore and Son. From detailed interior painting to durable exteriors and commercial spaces, we cover all your painting needs in Coventry with excellence."
         />
       </Head>
       <CommonLanding heading={"Services"} />
