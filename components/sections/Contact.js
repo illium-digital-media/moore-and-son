@@ -12,6 +12,7 @@ function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
 
@@ -22,21 +23,27 @@ function Contact() {
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-
+  
     const myForm = event.target;
     const formData = new FormData(myForm);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    }).catch((error) => alert(error));
-    setFormData({ name: "", email: "", message: "" });
-    setIsSubmitted(true);
+  
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+  
+      // Clear form data and set the submitted state only after fetch completes
+      setFormData({ name: "", email: "", phone: "", message: "" });
+      setIsSubmitted(true);
+    } catch (error) {
+      alert(error);
+    }
   };
-
+  
   return (
     <section className={styles.section}>
       <div className={styles.container}>
