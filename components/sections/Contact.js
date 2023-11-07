@@ -25,25 +25,19 @@ function Contact() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
+
     const myForm = event.target;
     const formData = new FormData(myForm);
-  
-    try {
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
-      });
-  
-      // Clear form data and set the submitted state only after fetch completes
-      setFormData({ name: "", email: "", phone: "", message: "" });
-      setIsSubmitted(true);
-    } catch (error) {
-      alert(error);
-    }
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    }).catch((error) => alert(error));
+    setFormData({ name: "", email: "", phone:"", message: "" });
+    setIsSubmitted(true);
   };
-  
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -68,8 +62,7 @@ function Contact() {
             onSubmit={handleSubmit}
             data-netlify="true"
           >
-            <input type="hidden" name="contact-form" value="contact-form" />
-
+            <input type="hidden" name="form-name" value="contact-form" />
             <label className={styles.label}>
               <input
                 className={styles.input}
@@ -123,6 +116,11 @@ function Contact() {
             >
               Submit
             </button>
+            {isSubmitted && (
+              <div className="mt-4 p-2 bg-green-500 text-white rounded">
+                We have received your message and will get back to you shortly!
+              </div>
+            )}
           </form>
         </div>
       </div>
