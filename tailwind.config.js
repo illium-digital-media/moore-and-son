@@ -14,11 +14,16 @@ module.exports = {
       },
       colors: {
         primary: "#1d4ed8",
-        header: '#1a1a1a'
+        header: '#1a1a1a',
+        primaryLight: '#bfdbfe'
       },
       backgroundColor:{
-        primary:"#5B832E"
-      }
+        primary:"#5B832E",
+        primaryLight: '#bfdbfe'
+      },
+      padding: {
+        section: 'clamp(3.75rem, 7.82vw, 6.25rem) 1rem',
+      },
     },
   },
   plugins: [],

@@ -4,8 +4,39 @@ import Title from "../Title/Title";
 import Topper from "../Topper/Topper";
 import styles from "./Contact.module.css";
 import interior1 from "../../assets/interior1.jpeg";
+import { useState } from "react";
+
 
 function Contact() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    }).catch((error) => alert(error));
+    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitted(true);
+  };
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -24,18 +55,24 @@ function Contact() {
           {/* Form */}
           <form
             className={styles.form}
-            id="cs-form-717"
-            name="Contact Form"
+            id="contact-form"
+            name="contact-form"
             method="post"
+            onSubmit={handleSubmit}
+            data-netlify="true"
           >
+            <input type="hidden" name="contact-form" value="contact" />
+
             <label className={styles.label}>
               <input
                 className={styles.input}
                 required
                 type="text"
-                id="name-717"
+                id="name"
                 name="name"
                 placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
               />
             </label>
             <label className={`${styles.label} ${styles.email}`}>
@@ -43,9 +80,11 @@ function Contact() {
                 className={styles.input}
                 required
                 type="text"
-                id="email-717"
+                id="email"
                 name="email"
                 placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
               />
             </label>
             <label className={`${styles.label} ${styles.phone}`}>
@@ -53,19 +92,23 @@ function Contact() {
                 className={styles.input}
                 required
                 type="text"
-                id="phone-717"
+                id="phone"
                 name="phone"
                 placeholder="Phone"
+                value={formData.phone}
+                onChange={handleChange}
               />
             </label>
             <label className={styles.label}>
               <textarea
                 className={`${styles.input} ${styles.textarea}`}
                 required
-                name="Message"
-                id="message-717"
+                id="message"
+                name="message"
                 placeholder="Write message..."
-              ></textarea>
+                value={formData.message}
+                onChange={handleChange}
+              />
             </label>
             <button
               className={`${styles.buttonSolid} ${styles.submit}`}
