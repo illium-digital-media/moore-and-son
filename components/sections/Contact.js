@@ -5,7 +5,6 @@ import Topper from "../Topper/Topper";
 import interior1 from "../../assets/interior1.jpeg";
 import { useState } from "react";
 
-
 function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -39,8 +38,8 @@ function Contact() {
 
   return (
     <section className={`p-section relative z-10`}>
-      <div className={`mx-auto flex justify-center items-center flex-col gap-14 w-full max-w-xs sm:max-w-lg lg:max-w-7xl lg:flex-row lg:justify-between lg:gap-14`}>
-        <picture className={`w-full h-auto relative lg:h-[52rem]`}>
+      <div className={`mx-auto flex justify-center items-center flex-col gap-14 w-full sm:max-w-lg lg:max-w-7xl lg:flex-row lg:justify-between lg:gap-14`}>
+        <picture className={`w-full h-auto relative aspect-square max-w-2xl lg:h-[52rem]`}>
           <Image src={interior1.src} alt="kitchen" width="610" height="425" className="w-full h-full object-cover absolute top-0 left-0" />
         </picture>
         <div className={`text-left w-full flex flex-col items-start`}>
