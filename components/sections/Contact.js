@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 import Title from "../Title/Title";
 import Topper from "../Topper/Topper";
-import styles from "./Contact.module.css";
 import interior1 from "../../assets/interior1.jpeg";
 import { useState } from "react";
 
@@ -34,20 +33,20 @@ function Contact() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     }).catch((error) => alert(error));
-    setFormData({ name: "", email: "", phone:"", message: "" });
+    setFormData({ name: "", email: "", phone: "", message: "" });
     setIsSubmitted(true);
   };
 
   return (
-    <section className={styles.section}>
-      <div className={styles.container}>
-        <picture className={styles.picture}>
-          <Image src={interior1.src} alt="kitchen" width="610" height="425" />
+    <section className={`p-section relative z-10`}>
+      <div className={`mx-auto flex justify-center items-center flex-col gap-14 w-full max-w-xs sm:max-w-lg lg:max-w-7xl lg:flex-row lg:justify-between lg:gap-14`}>
+        <picture className={`w-full h-auto relative lg:h-[52rem]`}>
+          <Image src={interior1.src} alt="kitchen" width="610" height="425" className="w-full h-full object-cover absolute top-0 left-0" />
         </picture>
-        <div className={styles.content}>
+        <div className={`text-left w-full flex flex-col items-start`}>
           <Topper text="Contact Us" />
           <Title title="Get in Touch" />
-          <p className={styles.text}>
+          <p className={`mb-8`}>
             Have questions or a project in mind? Reach out to the dedicated team
             at Moore and Son. We&apos;re here to discuss your vision, offer insights,
             and bring your ideas to vibrant life. Your next transformation is
@@ -55,7 +54,7 @@ function Contact() {
           </p>
           {/* Form */}
           <form
-            className={styles.form}
+            className={`bg-gray-100 py-4 px-5 md:py-12 md:px-8 flex justify-between flex-wrap items-center gap-2 w-full`}
             id="contact-form"
             name="contact-form"
             method="post"
@@ -63,9 +62,9 @@ function Contact() {
             data-netlify="true"
           >
             <input type="hidden" name="form-name" value="contact-form" />
-            <label className={styles.label}>
+            <label className={`text-sm sm:text-base w-full text-header flex flex-col justify-center items-start gap-2`}>
               <input
-                className={styles.input}
+                className={`w-full h-14 pl-6 text-header bg-white border-none box-border placeholder-gray-400`}
                 required
                 type="text"
                 id="name"
@@ -75,9 +74,9 @@ function Contact() {
                 onChange={handleChange}
               />
             </label>
-            <label className={`${styles.label} ${styles.email}`}>
+            <label className={`text-sm sm:text-base w-full text-header flex flex-col justify-center items-start gap-2`}>
               <input
-                className={styles.input}
+                className={`w-full h-14 pl-6 text-header bg-white border-none box-border placeholder-gray-400`}
                 required
                 type="text"
                 id="email"
@@ -87,9 +86,9 @@ function Contact() {
                 onChange={handleChange}
               />
             </label>
-            <label className={`${styles.label} ${styles.phone}`}>
+            <label className={`text-sm sm:text-base w-full text-header flex flex-col justify-center items-start gap-2`}>
               <input
-                className={styles.input}
+                className={`w-full h-14 pl-6 text-header bg-white border-none box-border placeholder-gray-400`}
                 required
                 type="text"
                 id="phone"
@@ -99,9 +98,9 @@ function Contact() {
                 onChange={handleChange}
               />
             </label>
-            <label className={styles.label}>
+            <label className={`text-sm sm:text-base w-full text-header flex flex-col justify-center items-start gap-2`}>
               <textarea
-                className={`${styles.input} ${styles.textarea}`}
+                className={`w-full h-14 pl-6 text-header bg-white border-none box-border min-h-[7.5rem] pt-6 mb-2 w-full placeholder-gray-400`}
                 required
                 id="message"
                 name="message"
@@ -111,7 +110,7 @@ function Contact() {
               />
             </label>
             <button
-              className={`${styles.buttonSolid} ${styles.submit}`}
+              className={`text-base leading-[clamp(2.875rem,5.5vw,3.5rem)] font-bold text-center m-0 text-white bg-primary inline-block relative z-10 box-border transition-colors duration-300 w-40 px-6 before:absolute before:inset-0 before:bg-black before:w-0 before:h-full before:transition-width before:duration-300 hover:before:w-full before:text-white before:-z-10 min-w-[18rem]`}
               type="submit"
             >
               Submit

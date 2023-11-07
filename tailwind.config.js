@@ -15,10 +15,10 @@ module.exports = {
       colors: {
         primary: "#1d4ed8",
         header: '#1a1a1a',
-        primaryLight: '#bfdbfe'
+        primaryLight: '#bfdbfe',
       },
       backgroundColor:{
-        primary:"#5B832E",
+        primary: "#1d4ed8",
         primaryLight: '#bfdbfe'
       },
       padding: {
