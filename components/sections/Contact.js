@@ -68,7 +68,7 @@ function Contact() {
             onSubmit={handleSubmit}
             data-netlify="true"
           >
-            <input type="hidden" name="contact-form" value="contact" />
+            <input type="hidden" name="contact-form" value="contact-form" />
 
             <label className={styles.label}>
               <input

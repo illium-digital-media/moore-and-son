@@ -2,7 +2,7 @@ import { useState, useRef, ChangeEvent, FormEvent } from "react";
 import Input from "./Input";
 
 const ContactForm = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false); 
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -37,7 +37,7 @@ const ContactForm = () => {
       body: new URLSearchParams(formData).toString(),
     }).catch((error) => alert(error));
     setFormData({ name: "", email: "", message: "" });
-    setIsSubmitted(true); 
+    setIsSubmitted(true);
   };
 
   return (
@@ -54,7 +54,7 @@ const ContactForm = () => {
     //   </label>
     //   <input type="submit" />
     // </form>
- 
+
     <form
       name="contact"
       className=""
