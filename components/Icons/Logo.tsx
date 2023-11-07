@@ -1,4 +1,11 @@
-<svg version="1.1" id="Layer_1"  fill="white" viewBox="420 580 1150 340" width="200" height="200" style="background-color: black;">
+import { DarkModeContext } from '../DarkModeContext';
+import React, { useContext } from 'react';
+
+const LogoIcon: React.FC<{ className?: string }> = (props) => {
+    const { darkMode, setDarkMode } = useContext(DarkModeContext);
+
+    return (
+        <svg version="1.1" id="Layer_1"  fill="white" viewBox="470 580 1150 340" width="120" height="120">
             <path d="M1517.6,653.1c-345.2,0-690.4,0-1035.6,0c33.9-206.9,223-419.2,499.2-428.7C1269.2,214.7,1479.3,428.1,1517.6,653.1z
    M1455.8,645.8c-39.3-189-223.3-373-476.2-362.4C848.8,289,739,342,650.9,438.8c-54,59.3-89.4,128.6-107.8,207.1
   C847.7,645.8,1151.6,645.8,1455.8,645.8z M500.5,646.9c15.6-70.7,46-141.2,89.4-199.2c63-84.3,144.2-144.2,243.7-178.7
@@ -201,3 +208,7 @@
   c0-13.7,11.1-23.7,24.6-23.7c11,0,20.5,7.4,23,16.3h-13.2c-1.8-3.2-5.2-6-10.1-6c-5.8,0-12.6,4.3-12.6,13.4
   c0,9.6,6.8,13.8,12.6,13.8c5.8,0,9.8-2.9,11-7.4h-13.7v-9.4H1387.7z" stroke="currentColor" />
         </svg>
+    );
+};
+
+export default LogoIcon;

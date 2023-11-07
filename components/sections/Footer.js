@@ -7,6 +7,8 @@ import emailIcon from "../../assets/email-icon.svg";
 import phoneIcon from "../../assets/phone-icon.svg";
 import clockIcon from "../../assets/clock-icon.svg";
 import Logo from "../../assets/logo.png";
+import LogoIcon from "../Icons/Logo";
+
 
 const Footer = () => {
   return (
@@ -14,7 +16,7 @@ const Footer = () => {
       <div className={`w-full m-auto flex items-start flex-wrap max-w-xl flex justify-start gap-x-12 gap-y-8 md:max-w-screen-xl lg:items-start lg:justify-end lg:flex-nowrap`}>
         <div className={`w-full relative lg:w-1/3 lg:max-w-md lg:mr-auto`}>
           <Link aria-label="Go back to home" className={`w-32 my-6 h-auto block`} href="">
-            <Image src={Logo} alt="logo" className={`w-full h-auto`} />
+            <LogoIcon className={``} />
           </Link>
 
           <div className={`inline-flex justify-start space-x-2 lg:flex-row lg:relative lg:top-auto lg:right-auto`}>
