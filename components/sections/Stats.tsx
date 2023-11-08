@@ -12,7 +12,7 @@ const Stats = () => {
 
     return (
         <div className={`p-section relative z-10`}>
-            <ul className={`w-full max-w-xl m-auto p-0 flex justify-center items-center flex col gap-10 sm:flex-row sm:flex-wrap sm:gap-x-12 sm:gap-y-16 lg:flex-nowrap lg:justify-evenly lg:max-w-7xl`}>
+            <ul className={`w-full max-w-xl m-auto p-0 flex flex-col justify-center items-center flex col gap-10 sm:flex-row sm:flex-wrap sm:gap-x-12 sm:gap-y-16 lg:flex-nowrap lg:justify-evenly lg:max-w-7xl`}>
                 {statsData.map((item, index) => (
                     <li className={`flex justify-start items-center`} key={index}>
                         <picture className={`mr-4 flex rounded-full justify-center items-center border-box w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 border border-gray-300 flex-none`}>

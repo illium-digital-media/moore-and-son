@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./ServicesPreview.module.css"; // Import the CSS module
 import commercialBuilding from "../../assets/commercial1.jpeg";
 import exteriorBuilding from "../../assets/exterior1.jpeg";
 import interiorBuilding from "../../assets/interior1.jpeg";
@@ -32,26 +31,26 @@ const ServicesPreview = () => {
   
 
   return (
-    <section className={styles.section}>
-      <div className={styles.container}>
-        <div className={styles.content}>
-          <div className={styles.flexGroup}>
+    <section className={`p-section relative`}>
+      <div className={`w-full max-w-xl m-auto flex flex-col justify-center items-center gap-12 lg:gap-16 lg:max-w-7xl`}>
+        <div className={`w-full flex flex-col items-center text-center gap-4 md:flex-row md:justify-between md:text-left md:gap-10`}>
+          <div className={``}>
             <Topper text="Our Services" />
             <Title title="Our Popular Services" />
           </div>
-          <p className={styles.text}>
+          <p className={`md:w-1/2`}>
             Discover the range of specialized painting and decorating solutions
             we offer, tailored to meet your every need.
           </p>
         </div>
-        <ul className={styles.cardGroup}>
+        <ul className={`w-full m-0 p-0 grid grid-cols-12 gap-4 lg:gap-5`}>
           {services.map((service, index) => (
-            <li className={styles.item} key={index}>
-              <Link href={service.link} className={styles.link}>
-                <h3 className={styles.h3}>{service.title}</h3>
-                <p className={styles.itemText}>{service.text}</p>
+            <li className={`group w-full h-[18.75rem] lg:h-[23.75rem] border-box bg-black flex flex-col justify-end items-start relative text-left shadow-xl col-span-12 z-10 lg:col-span-4 lg:h-[30rem]`} key={index}>
+              <Link href={service.link} className={`w-full h-full border-box p-5 lg:p-8 flex flex-col justify-end relative z-10 after:content-[''] after:w-full after:h-full after:opacity-0 after:absolute after:top-0 after:right-0 after:-z-10 after:duration-300`}>
+                <h3 className={`text-xl lg:text-2xl leading-[1.2em] font-bold mb-1 text-white duration-300 group-hover:text-primary`}>{service.title}</h3>
+                <p className={`max-sm:text-sm leading-[1.5em] text-white`}>{service.text}</p>
               </Link>
-              <picture className={styles.picture}>
+              <picture className={`w-full h-full overflow-hidden block absolute top-0 left-0 -z-10 before:content-[''] before:w-full before:h-full before:opacity-100 before:block before:absolute before:top-0 before:left-0 before:bg-gradient-to-b before:from-[rgba(26,26,26,0)] before:to-black bb after:content-[''] after:w-full after:h-full after:opacity-0 after:block after:absolute after:top-0 after:left-0 after:bg-gradient-to-b after:from-[#1a1a1a00] after:via-[#00000066] after:to-[#000000cc] after:duration-300 group-hover:after:opacity-100`}>
                 <Image
                   decoding="async"
                   src={service.imageSrc.src}
@@ -59,6 +58,7 @@ const ServicesPreview = () => {
                   width="413"
                   height="374"
                   aria-hidden="true"
+                  className="w-full h-full object-cover absolute top-0 left-0 -z-10 duration-700 group-hover:scale-125"
                 />
               </picture>
             </li>

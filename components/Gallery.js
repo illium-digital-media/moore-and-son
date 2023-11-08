@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { galleryPhotos } from "@/data/gallery";
-import styles from "./Gallery.module.css";
 import Topper from "./Topper/Topper";
+import Title from "./Title/Title";
 
 const serviceCategories = ["All", "Exterior", "Interior"];
 
@@ -46,10 +46,10 @@ const Gallery = () => {
 
   return (
     <section className="max-w-screen-lg m-auto items-start max-lg:px-4 py-10">
-      <div className={`pb-4 ${styles.content}`}>
-        <div className={styles.flex}>
+      <div className={`pb-4 text-left w-full flex flex-col items-start md:flex-row md:justify-between md:items-end md:gap-16`}>
+        <div className={'md:w-1/2'}>
           <Topper text="Gallery" />
-          <h2 className={styles.title}>Some of Our Best Work</h2>
+          <Title title="Some of Our Best Work" />
         </div>
         <div className="text-center">
           {serviceCategories.map((category) => (
@@ -67,16 +67,15 @@ const Gallery = () => {
           ))}
         </div>
       </div>
-      <div className="flex flex-wrap justify-center">
+      <div className="w-full m-0 p-0 sm:grid grid-cols-12 gap-4 lg:gap-5">
         {filteredImages.map((image, index) => (
           <Image
             key={index}
             src={image.url}
             alt={image.category}
-            width={305}
             height={100}
-            style={{ height: '400px' }} // Set the height inline
-            className={`w-full max-w-xs mx-2 mb-3 transform scale-0 transition-all duration-500 ease-in-out hover:scale-200 ${
+            style={{ height: '400px', width:'100%'}} // Set the height inline
+            className={`w-full max-w-xs col-span-4 mb-3 transform scale-0 transition-all duration-500 ease-in-out hover:scale-200 ${
               fadeOut ? "opacity-0" : "opacity-100"
             }`}
             onLoad={(e) => {
