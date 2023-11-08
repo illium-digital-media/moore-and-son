@@ -19,9 +19,13 @@ module.exports = {
       },
       backgroundColor:{
         primary: "#1d4ed8",
-        primaryLight: '#bfdbfe'
+        primaryLight: '#bfdbfe',
+
       },
       padding: {
+        section: 'clamp(3.75rem, 7.82vw, 6.25rem) 1rem',
+      },
+      margin: {
         section: 'clamp(3.75rem, 7.82vw, 6.25rem) 1rem',
       },
     },

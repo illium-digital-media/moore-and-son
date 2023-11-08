@@ -10,7 +10,7 @@ const NavItem: React.FC<{
   const isActive = router.pathname === props.pageLink;
   return (
     <li
-      className={`p-3 m-auto uppercase text-xs font-bold ${
+      className={`p-3 m-auto uppercase text-base font-bold ${
         isActive ? "text-primary" : " hover:text-primary"
       } duration-200 relative`}
     >
