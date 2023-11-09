@@ -28,7 +28,7 @@ const Service: React.FC<{ topper: string, title: string, content: string, bullet
           </ul>
           <Button link='/contact' text='Get a Quote' />
         </div>
-        <div className={`h-[38em] mt-[4rem] relative -order-1 w-[35.5em] -translate-x-2 before:content-[''] before:w-[20em] before:h-[20em] before:bg-primary before:opacity-100 before:absolute before:block before:-top-[2em] before:-right-[2.3em] lg:mr-16 lg:order-2 text-[min(2.3vw,_0.8em)] lg:text-[min(1.1vw,_1em)] ${styles.imageGroup}`}>
+        <div className={`h-[38em] mt-[4rem] relative -order-1 w-[35.5em] -translate-x-2 before:content-[''] before:w-[20em] before:h-[20em] before:bg-primary before:opacity-100 before:absolute before:block before:-top-[2em] before:-right-[2.3em] lg:mr-16 lg:order-2 text-[min(2.3vw,_0.8em)] lg:text-[min(1.1vw,_1em)]`}>
           {/* Large Image */}
           <picture className={`block absolute w-[30em] h-[34em] top-0 right-0`}>
             {/* <source
