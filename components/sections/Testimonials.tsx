@@ -42,11 +42,11 @@ const Testimonials = () => {
         </div>
         <ul className={`w-full flex justify-center items-center flex-col gap-4 md:flex-row justify-between items-stretch flex-wrap xl:flex-nowrap`}>
           {testimonialsData.map((testimonial, index) => (
-            <li className={`w-full max-w-2xl bg-gray-100 border-box flex justify-center items-start flex-col relative py-8 lg:py-12 px-4 lg:px-10 md:w-[48.5%] xl:w-[49.5%] md:last-of-type:w-full md:last-of-type:max-w-full md:last-of-type:items-center md:last-of-type:text-center xl:w-full xl:items-start xl:last-of-type:text-left xl:last-of-type:items-start xl:last-of-type:w-[49.5%]`} key={index}>
+            <li className={`w-full max-w-2xl bg-gray-100 border-box flex justify-center items-start flex-col relative py-8 lg:py-12 px-4 lg:px-10 md:w-[48.5%] xl:w-[49.5%] md:last-of-type:w-full md:last-of-type:max-w-full md:last-of-type:items-center md:last-of-type:text-center xl:w-full xl:items-start xl:last-of-type:text-left xl:last-of-type:items-start`} key={index}>
               {/* Blue Quote */}
               <img
                 className={`h-auto block mb-5 lg:mb-6 w-40 lg:w-48`}
-                aria-hidden="true"x
+                aria-hidden="true"
                 src={testimonial.starsSrc}
                 decoding="async"
                 alt="quote icon"
