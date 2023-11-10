@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
         </div>
         <ul className={`w-full flex justify-center items-center flex-col gap-4 md:justify-between md:items-stretch md:flex-row md:gap-4 lg:gap-5`}>
           {items.map((item, index) => (
-            <li className={`group text-left w-full p-8 bg-gray-100 rounded-xl duration-300 border-box hover:bg-primary cursor-pointer md:w-auto p-8 sm:p-[2rem] md:p-[calc(1rem+2.1vw)] lg:p-[2rem]`} key={index}>
+            <li className={`group text-left w-full p-8 bg-gray-100 duration-300 border-box hover:bg-primary cursor-pointer md:w-auto p-8 sm:p-[2rem] md:p-[calc(1rem+2.1vw)] lg:p-[2rem]`} key={index}>
               {item.icon}
               <h3 className={`mb-4 duration-300 group-hover:text-white !leading-8 text-xl lg:text-2xl`}>{item.title}</h3>
               <p className={`group-hover:text-white text-gray-700 !leading-6 duration-300`}>{item.description}</p>

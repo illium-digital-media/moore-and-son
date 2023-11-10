@@ -8,7 +8,7 @@ const LandingCenter = () => {
       <div className={`w-full m-auto relative max-w-7xl py-36 lg:py-48 before:content-['']`}>
         <div className={`m-auto w-[80vw] max-w-md lg:max-w-xl flex items-start justify-center flex-wrap gap-x-5 border-box`}>
           <h1 className={`font-black text-center relative w-full !leading-[1.2em] text-4xl lg:text-6xl mb-8 lg:mb-10 text-white`}>
-            Coventry&apos;s Premier Painters and Decorators
+            Coventry&apos;s Leading Painters and Decorators
           </h1>
           <p className={`lg:text-xl !leading-8 text-center w-full mb-8 lg:mb-10 text-white`}>
             Expert painters and decorators offering a wide range of services for
