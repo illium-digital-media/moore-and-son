@@ -4,12 +4,9 @@ import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Stats from "../components/sections/Stats";
 import Testimonials from "../components/sections/Testimonials";
 import LandingCenter from "../components/LandingCenter/LandingCenter";
-import FAQs from "../components/sections/FAQs";
 import GalleryPreview from "../components/sections/GalleryPreview";
 import Services from "../components/sections/Services";
 import Contact from "../components/sections/Contact";
-
-const sections = [];
 
 const HomePage = () => {
   return (

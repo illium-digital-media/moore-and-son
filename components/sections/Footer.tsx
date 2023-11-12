@@ -6,7 +6,6 @@ import facebookIcon from "../../assets/facebook-icon.svg";
 import emailIcon from "../../assets/email-icon.svg";
 import phoneIcon from "../../assets/phone-icon.svg";
 import clockIcon from "../../assets/clock-icon.svg";
-import Logo from "../../assets/logo.png";
 import LogoIcon from "../Icons/Logo";
 
 
@@ -23,7 +22,9 @@ const Footer = () => {
             <a
               className={`w-8 h-8 bg-gray-700 rounded-full flex justify-center items-center relative z-10 transition-transform transition-bg duration-300 ease-in-out hover:bg-primaryLight hover:-translate-y-1`}
               aria-label="Visit Facebook profile"
-              href=""
+              href="https://www.facebook.com/mooreandson.pd/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Image
                 className={`h-3 w-auto block`}
@@ -53,10 +54,9 @@ const Footer = () => {
         <div>
           <span className={`text-lg font-semibold leading-6 mb-5 text-white block relative`}>Contact Information</span>
           <ul className={`flex flex-col gap-3`}>
-            <li>
-              <a className={`text-base no-underline leading-snug text-left text-gray-400 inline-flex items-start gap-2 transition-colors duration-300 hover:text-primaryLight`} href="" target="_blank">
+            <li className={`text-base no-underline leading-snug text-left text-gray-400 inline-flex items-start gap-2 transition-colors duration-300`}>
                 <Image
-                  className={`w-5 h-auto mr-1 block`}
+                  className={`w-5 h-auto mr-1 block text-base no-underline leading-snug text-left text-gray-400 inline-flex items-start gap-2 transition-colors duration-300 hover:text-primaryLight`}
                   aria-hidden="true"
                   loading="lazy"
                   decoding="async"
@@ -66,7 +66,6 @@ const Footer = () => {
                   height="20"
                 />
                 Everyday 7am – 7pm
-              </a>
             </li>
             <li>
               <a className={`text-base no-underline leading-snug text-left text-gray-400 inline-flex items-start gap-2 transition-colors duration-300 hover:text-primaryLight`} href="tel:07961814490">
@@ -109,11 +108,11 @@ const Footer = () => {
             © Copyright 2023 | Built by:{" "}
             <a
               href="https://www.illiumdigitalmedia.com/"
-              className={`text-white text-base leading-snug no-underline mx-0 text-gray-400 inline-block relative transition-colors duration-300 hover:text-primary`}
+              className={`text-white text-base leading-snug no-underline mx-0 text-gray-400 inline-block relative transition-colors duration-300`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="text-white hover:text-primary duration-300">Illium Digital Media</span>
+              <span className="text-white hover:text-primaryLight duration-300">Illium Digital Media</span>
             </a>
           </div>
 

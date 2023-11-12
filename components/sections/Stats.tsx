@@ -5,8 +5,8 @@ import Image from 'next/image';
 const Stats = () => {
     const statsData = [
         { iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Stats/person2-gold.svg', number: '15+', desc: 'Years in Business' },
-        { iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Stats/mop-gold.svg', number: '5000+', desc: 'Projects Completed' },
-        { iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Stats/thumbs-gold.svg', number: '4500+', desc: 'Satisfied Clients' },
+        { iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Stats/mop-gold.svg', number: '3000+', desc: 'Projects Completed' },
+        { iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Stats/thumbs-gold.svg', number: '2700+', desc: 'Satisfied Clients' },
         { iconSrc: 'https://csimg.nyc3.digitaloceanspaces.com/Stats/award2-gold.svg', number: '85%', desc: 'Repeat Business Rate' },
     ];
 

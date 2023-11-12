@@ -79,7 +79,7 @@ const BurgerMenu: React.FC = () => {
             </div>
             <ul className="flex flex-col min-h-[250px]">
               {navigationItems.map((item, index) => (
-                <NavItems
+                <NavItem
                   key={index}
                   pageLink={item.link}
                   copy={item.text}

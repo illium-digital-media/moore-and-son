@@ -11,7 +11,7 @@ const NavItems: React.FC<{
   return (
     <>
         <Link className={`${isActive ? 'lg:text-primaryLight max-md:font-bold' : 'lg:text-white max-lg:text-black'}  md:h-full md:flex items-center`} href={props.pageLink} onClick={props.handleClick}>
-          <span className={`px-5 py-5 m-auto duration-200 max-md:flex md:justify-center`}>
+          <span className={`px-5 py-4 md:py-5 m-auto duration-200 max-md:flex md:justify-center`}>
             {props.copy}
           </span>
         </Link>
