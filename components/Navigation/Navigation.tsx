@@ -131,10 +131,10 @@ const TransparentNavbar: React.FC = () => {
 						<div className="">
 							<LogoIcon classes="max-md:h-32 max-md:w-32" colour={`${navbarVisible ? 'black' : 'white'}`} />
 						</div>
+						<div className="">
+							<LogoIcon classes="max-md:h-28 max-md:w-28" colour={`${navbarVisible ? 'black' : 'white'}`} />
+						</div>
 					</Link>
-					<Image src={test} alt="" height={400} width={400}/>
-					<Image src={testSvg} alt="" height={200} width={200}/>
-
 				</div>
 
 				<div className="flex items-center">

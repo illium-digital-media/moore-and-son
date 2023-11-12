@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 const LandingCenter = () => {
   return (
     <section className={`relative overflow-hidden text-center z-10 xl:!bg-cover xl:!bg-center xl:!bg-fixed xl:!bg-no-repeat`} >
-      <div className={`w-full m-auto relative max-w-7xl py-36 lg:py-48 before:content-['']`}>
+      <div className={`w-full m-auto relative max-w-7xl py-48 lg:py-48 before:content-['']`}>
         <div className={`m-auto w-[80vw] max-w-md lg:max-w-xl flex items-start justify-center flex-wrap gap-x-5 border-box`}>
           <h1 className={`font-black text-center relative w-full !leading-[1.2em] text-4xl lg:text-6xl mb-8 lg:mb-10 text-white`}>
             Coventry&apos;s Leading Painters and Decorators
