@@ -26,7 +26,7 @@ const LandingCenter = () => {
         <source media="(min-width: 601px)" srcSet={background.src} />
         {/* Actual background image */}
         <div className="absolute top-0 left-0 w-full h-full">
-          <Image src={background.src} priority={true} layout="fill" objectFit="cover" alt="Digital background" loading="eager" />
+          <Image src={background.src} priority={true} alt="Digital background" loading="eager"  fill style={{objectFit:"cover"}}/>
         </div>
       </picture>
     </section>

@@ -97,6 +97,9 @@ import navigationItems from "../../data/navigation";
 import LogoIcon from "../Icons/Logo";
 import DarkModeToggle from "./DarkModeToggle";
 import Button from "../Button/Button";
+import test from '../../assets/test.png';
+import Image from "next/image";
+import testSvg from '../../assets/test.svg';
 
 
 const TransparentNavbar: React.FC = () => {
@@ -129,6 +132,9 @@ const TransparentNavbar: React.FC = () => {
 							<LogoIcon classes="max-md:h-32 max-md:w-32" colour={`${navbarVisible ? 'black' : 'white'}`} />
 						</div>
 					</Link>
+					<Image src={test} alt="" />
+					<Image src={testSvg} alt="" />
+
 				</div>
 
 				<div className="flex items-center">

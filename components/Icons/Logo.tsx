@@ -5,7 +5,7 @@ const LogoIcon: React.FC<{ classes?: string, colour: string }> = (props) => {
     const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
     return (
-        <svg className={props.classes} version="1.1" id="Layer_1" viewBox="470 580 1150 340" fill={props.colour} width="120" height="120">
+        <svg className={props.classes} version="1.1" id="Layer_1" viewBox="470 580 1150 340" fill={props.colour}>
             <path d="M1517.6,653.1c-345.2,0-690.4,0-1035.6,0c33.9-206.9,223-419.2,499.2-428.7C1269.2,214.7,1479.3,428.1,1517.6,653.1z
    M1455.8,645.8c-39.3-189-223.3-373-476.2-362.4C848.8,289,739,342,650.9,438.8c-54,59.3-89.4,128.6-107.8,207.1
   C847.7,645.8,1151.6,645.8,1455.8,645.8z M500.5,646.9c15.6-70.7,46-141.2,89.4-199.2c63-84.3,144.2-144.2,243.7-178.7
