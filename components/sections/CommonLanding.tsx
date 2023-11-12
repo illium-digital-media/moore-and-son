@@ -9,9 +9,9 @@ const CommonLanding: React.FC<{ heading: string }> = (props) => {
         <Image
           src={heroBg}
           priority={true}
-          layout="fill"
           objectFit="cover"
           alt="Background"
+          fill
         />
       </div>
 
