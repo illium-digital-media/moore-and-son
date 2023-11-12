@@ -126,7 +126,7 @@ const TransparentNavbar: React.FC = () => {
 				<div className="py-2">
 					<Link href="/">
 						<div className="">
-							<LogoIcon classes="max-md:h-24 max-md:w-24" colour={`${navbarVisible ? 'black' : 'white'}`} />
+							<LogoIcon classes="max-md:h-28 max-md:w-28" colour={`${navbarVisible ? 'black' : 'white'}`} />
 						</div>
 					</Link>
 				</div>
