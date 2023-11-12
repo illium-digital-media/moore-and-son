@@ -12,9 +12,9 @@ const Stats = () => {
 
     return (
         <div className={`p-section relative z-10`}>
-            <ul className={`w-full max-w-xl m-auto p-0 flex flex-col justify-center items-center flex col gap-10 sm:flex-row sm:flex-wrap sm:gap-x-12 sm:gap-y-16 lg:flex-nowrap lg:justify-evenly lg:max-w-7xl`}>
+            <ul className={`w-full max-w-[15rem] sm:max-w-xl m-auto p-0 flex flex-col justify-center items-start sm:items-center flex col gap-10 sm:flex-row sm:flex-wrap sm:gap-x-12 sm:gap-y-16 lg:flex-nowrap lg:justify-evenly lg:max-w-7xl`}>
                 {statsData.map((item, index) => (
-                    <li className={`flex justify-start items-center`} key={index}>
+                    <li className={`flex justify-start items-start sm:items-center`} key={index}>
                         <picture className={`mr-4 flex rounded-full justify-center items-center border-box w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 border border-gray-300 flex-none`}>
                             <img className={`w-7 sm:w-auto md:w-10`} src={item.iconSrc} alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true" />
                         </picture>
