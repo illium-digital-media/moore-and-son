@@ -31,10 +31,6 @@ const Service: React.FC<{ topper: string, title: string, content: string, bullet
         <div className={`h-[38em] mt-[4rem] relative -order-1 w-[35.5em] -translate-x-2 before:content-[''] before:w-[20em] before:h-[20em] before:bg-primary before:opacity-100 before:absolute before:block before:-top-[2em] before:-right-[2.3em] lg:mr-16 lg:order-2 text-[min(2.3vw,_0.8em)] lg:text-[min(1.1vw,_1em)]`}>
           {/* Large Image */}
           <picture className={`block absolute w-[30em] h-[34em] top-0 right-0`}>
-            {/* <source
-            media="(max-width: 600px)"
-            srcSet="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/lab1-m.jpg"
-          /> */}
             <Image
               aria-hidden="true"
               loading="lazy"
@@ -44,7 +40,6 @@ const Service: React.FC<{ topper: string, title: string, content: string, bullet
               width="334"
               height="380"
               className='absolute top-0 left-0 h-full w-full object-cover'
-
             />
           </picture>
           {/* Small Image */}
