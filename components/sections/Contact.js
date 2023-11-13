@@ -24,7 +24,7 @@ function Contact() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const myForm = event.target;
+    const myForm = event.currentTarget; // Use currentTarget instead of target
     const formData = new FormData(myForm);
 
     fetch("/", {
@@ -114,11 +114,9 @@ function Contact() {
             >
               Submit
             </button>
-            {isSubmitted && (
-              <div className="mt-4 p-2 bg-green-500 text-white rounded">
-                We have received your message and will get back to you shortly!
-              </div>
-            )}
+            {isSubmitted && <div className="bg-green-400 text-center text-green-800 p-3">
+              <span className="font-bold">Thanks for contacting us!</span> We&apos;ll be in touch shortly
+            </div>}
           </form>
         </div>
       </div>
