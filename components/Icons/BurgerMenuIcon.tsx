@@ -1,9 +1,4 @@
-import { DarkModeContext } from '../DarkModeContext';
-import React, { useContext } from 'react';
-
 const BurgerMenuIcon: React.FC<{ colour: string }> = (props) => {
-  const { darkMode, setDarkMode } = useContext(DarkModeContext);
-
   return (
     <>
       {[...Array(3)].map((_, index) => (

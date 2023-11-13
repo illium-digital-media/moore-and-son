@@ -1,12 +1,8 @@
 import Head from "next/head";
 import CommonLanding from "@/components/sections/CommonLanding";
 import Contact from "@/components/sections/Contact";
-import React, { useContext } from "react";
-import { DarkModeContext } from "../components/DarkModeContext";
 
 const ContactPage = () => {
-  const { darkMode, setDarkMode } = useContext(DarkModeContext);
-
   return (
     <>
       <Head>
