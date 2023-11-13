@@ -1,7 +1,6 @@
 import CommonLanding from "../components/sections/CommonLanding";
 import Head from "next/head";
 import ServicesPreview from "@/components/sections/ServicesPreview";
-import Services from "../components/Section";
 
 const ServicesPage: React.FC = () => {
   return (
