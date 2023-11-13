@@ -74,7 +74,6 @@ const Gallery = () => {
               <Image
                 src={image.url}
                 alt={image.category}
-                height={100}
                 className={`absolute top-0 left-0 h-full w-full object-cover transform scale-0 transition-all duration-500 ease-in-out hover:scale-200 ${fadeOut ? "opacity-0" : "opacity-100"
                   }`}
                 onLoad={(e) => {
