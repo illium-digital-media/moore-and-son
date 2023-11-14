@@ -15,8 +15,8 @@ const LandingCenter = () => {
             interiors, exteriors, and commercial spaces. Elevate your spaces
             with our unmatched precision.
           </p>
-          <Button link="/contact" text="Get a Quote" classes="!py-4 !px-1 mb-4" bgHoverColor="white" />
-          <Button link="/gallery" text="Gallery" bgColor="transparent" classes="border-[1px] !py-4 !px-1" bgHoverColor="black"  />
+          <Button link="/contact" text="Get a Quote" classes="!py-4 !px-1 mb-4" />
+          <Button link="/gallery" text="Gallery" bgColor="transparent" classes="border-[1px] !py-4 !px-1" />
         </div>
       </div>
 
