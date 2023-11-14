@@ -50,7 +50,7 @@ const TransparentNavbar: React.FC = () => {
 				</div>
 
 				<div className="flex items-center">
-					<ul className={`max-md:hidden menu flex items-center h-full ${navbarVisible ? 'text-black' : 'text-white'}`}>
+					<ul className={`max-md:hidden menu flex items-center h-full gap-8 ${navbarVisible ? 'text-black' : 'text-white'}`}>
 						{navigationItems.map((item, index) => (
 							<NavItem
 								key={index}

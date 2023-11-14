@@ -109,7 +109,7 @@ function Contact() {
               />
             </label>
             <button
-              className={`text-base leading-[clamp(2.875rem,5.5vw,3.5rem)] font-bold text-center m-0 text-white bg-primary inline-block relative z-10 box-border transition-colors duration-300 w-40 px-6 before:absolute before:inset-0 before:bg-black before:w-0 before:h-full before:transition-width before:duration-300 hover:before:w-full before:text-white before:-z-10 min-w-[18rem]`}
+              className={`text-base leading-[clamp(2.875rem,5.5vw,3.5rem)] font-bold text-center m-0 text-white bg-primary inline-block relative z-10 box-border transition-colors duration-300 w-40 px-6 before:absolute before:inset-0 before:w-0 before:h-full before:transition-width before:duration-300 hover:before:w-full before:text-white before:-z-10 min-w-[18rem]`}
               type="submit"
             >
               Submit

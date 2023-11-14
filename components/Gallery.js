@@ -57,7 +57,7 @@ const Gallery = () => {
               key={index}
               onClick={() => handleCategoryClick(category)}
               className={`px-4 py-2 mx-2 mb-3 ${category === selectedCategory
-                ? " text-primary"
+                ? " font-bold"
                 : " text-black hover:text-primary"
                 }`}
             >

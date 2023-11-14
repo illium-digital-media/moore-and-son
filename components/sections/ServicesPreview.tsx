@@ -47,7 +47,7 @@ const ServicesPreview = () => {
           {services.map((service, index) => (
             <li className={`group w-full h-[18.75rem] lg:h-[23.75rem] border-box bg-black flex flex-col justify-end items-start relative text-left shadow-xl col-span-12 z-10 lg:col-span-4 lg:h-[30rem]`} key={index}>
               <Link href={service.link} className={`w-full h-full border-box p-5 lg:p-8 flex flex-col justify-end relative z-10 after:content-[''] after:w-full after:h-full after:opacity-0 after:absolute after:top-0 after:right-0 after:-z-10 after:duration-300`}>
-                <h3 className={`text-xl lg:text-2xl leading-[1.2em] font-bold mb-1 text-white duration-300 group-hover:text-primary`}>{service.title}</h3>
+                <h3 className={`text-xl lg:text-2xl leading-[1.2em] font-bold mb-1 text-white duration-300`}>{service.title}</h3>
                 <p className={`max-sm:text-sm leading-[1.5em] text-white`}>{service.text}</p>
               </Link>
               <picture className={`w-full h-full overflow-hidden block absolute top-0 left-0 -z-10 before:content-[''] before:w-full before:h-full before:opacity-100 before:block before:absolute before:top-0 before:left-0 before:bg-gradient-to-b before:from-[rgba(26,26,26,0)] before:to-black bb after:content-[''] after:w-full after:h-full after:opacity-0 after:block after:absolute after:top-0 after:left-0 after:bg-gradient-to-b after:from-[#1a1a1a00] after:via-[#00000066] after:to-[#000000cc] after:duration-300 group-hover:after:opacity-100`}>

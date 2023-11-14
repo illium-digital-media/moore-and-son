@@ -12,7 +12,10 @@ const NavItem: React.FC<{
 }> = (props) => {
   const navbarVisible = useSelector((state: NavbarState) => state.navbarVisible);
   const router = useRouter();
-  const isActive = router.pathname === props.pageLink;
+
+  const path = router.pathname.replace('/', '');
+  const link = props.pageLink.replace('/', '');
+  const isActive = (path.length === 0 && link.length === 0) || (link.length !== 0 && path.includes(link));
 
   const [windowWidth, setWindowWidth] = useState(Number);
 
@@ -34,8 +37,8 @@ const NavItem: React.FC<{
   }, []); 
 
   return (
-    <li className={`py-3 md:m-auto px-5 list-none text-base duration-200 relative ${isActive ? (windowWidth <= 767 ? 'text-primary font-bold' : (navbarVisible ? 'text-primary font-bold' : 'text-primaryLight font-bold')) : ''} ${navbarVisible || windowWidth <= 767? 'hover:text-primary' : 'hover:text-primaryLight'}`}>
-      <Link href={props.pageLink} onClick={props.handleClick}>
+    <li className="px-4 md:px-0">
+      <Link className={`pb-1 hover:before:w-full before:duration-300 before:content-[''] ${isActive ? 'before:w-full' : 'before:w-0' }  before:h-[0.2rem] before:opacity-100 before:block before:absolute before:bottom-0 before:left-0 md:m-auto list-none text-base duration-200 relative ${isActive ? (windowWidth <= 767 ? 'before:bg-primary text-primary font-bold' : (navbarVisible ? 'before:bg-primary text-primary font-bold' : 'before:bg-white font-bold')) : ''} ${navbarVisible || windowWidth <= 767? 'before:bg-primary hover:text-primary' : 'before:bg-white '}`} href={props.pageLink} onClick={props.handleClick}>
         {props.copy}
       </Link>
     </li>
