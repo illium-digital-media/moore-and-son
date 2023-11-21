@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["www.mooreandsondecorators.com"],
+    domains: ["www.mooreandsondecorators.com", "mooreandsondecorators.com"],
     formats: ['image/avif', 'image/webp'],
   },
   output: "standalone",
