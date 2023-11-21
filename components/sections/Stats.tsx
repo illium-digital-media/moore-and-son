@@ -1,5 +1,6 @@
 import React from 'react';
-import StatsBg from '../../assets/stats-bg.jpg'
+import StatsBgWEBP from '../../assets/stats-bg.webp'
+import StatsBg from '../../assets/stats-bg.jpg';
 import Image from 'next/image';
 
 const Stats = () => {
@@ -16,7 +17,8 @@ const Stats = () => {
                 {statsData.map((item, index) => (
                     <li className={`flex justify-start items-start sm:items-center`} key={index}>
                         <picture className={`mr-4 flex rounded-full justify-center items-center border-box w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 border border-gray-300 flex-none`}>
-                            <img className={`w-7 sm:w-auto md:w-10`} src={item.iconSrc} alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true" />
+                            <source srcSet={StatsBgWEBP.src} type="image/webp" />
+                            <Image className={`w-7 sm:w-auto md:w-10`} src={item.iconSrc} alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true" />
                         </picture>
                         <div className={`flex justify-center items-start flex-col`}>
                             <span className={`text-2xl md:text-3xl lg:text-5xl text-white font-black leading-12 block`}>{item.number}</span>

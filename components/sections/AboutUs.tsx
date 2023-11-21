@@ -13,7 +13,8 @@ const AboutUs = () => {
     <section className={`md:p-section md:m-section md:ml-0 md:mr-0 md:overflow-hidden`}>
       <div className={`max-lg:bg-primary w-full m-auto flex flex-col items-center lg:gap-16 max-w-[80rem] md:flex-row md:relative md:z-10 md:before:content-[''] md:before:w-screen md:before:ml-[-38%] md:before:bg-primary md:before:absolute md:before:left-1/2 md:before:-z-10 md:before:-bottom-36 md:before:-top-36`}>
         <picture className={`lg:before:opacity-60 block relative w-full h-80 md:w-[47vw] md:max-w-xl md:h-[33.5rem] md:relative md:before:content-[''] md:before:w-1/2 md:before:bg-primaryLight md:before:absolute before:top-[-1.5rem] md:before:top-[-2rem] before:left-[-1.5rem] before:bottom-[-1.5rem] md:before:bottom-[-2rem] md:mt-[1.5rem] md:mb-[1.5rem] md:ml-[1.5rem]`} >
-          <source srcSet={VanWEBP.src} type="image/webp" />
+          <source media="(max-width: 600px)" srcSet={VanWEBP.src} />
+          <source media="(min-width: 601px)" srcSet={VanWEBP.src} />
           <Image src={Van.src} alt="van" width="618" height="537"
             quality={75} className="absolute top-0 left-0 h-full w-full object-cover" />
         </picture>
