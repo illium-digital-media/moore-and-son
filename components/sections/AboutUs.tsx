@@ -30,7 +30,7 @@ const AboutUs = () => {
             just painting walls. Discover the Moore & Son difference and let us
             redefine your spaces.
           </p>
-          <Button link="/about" text="More" bgColor="white" textColor="black" />
+          <Button link="/about" text="About Us" bgColor="white" textColor="black" />
         </div>
       </div>
     </section>

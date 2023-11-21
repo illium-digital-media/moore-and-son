@@ -1,8 +1,6 @@
-import React, { useContext } from "react";
-
 const CloseButton: React.FC<{ handleClose: () => void }> = (props) => {
   return (
-    <button className={`top-0 left-0 text-black`} onClick={props.handleClose}>
+    <button className={`top-0 left-0 text-black`} onClick={props.handleClose} aria-label="Close">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-6 w-6"

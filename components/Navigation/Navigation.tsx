@@ -42,7 +42,7 @@ const TransparentNavbar: React.FC = () => {
 		<header className={`w-full z-20 ${navbarVisible ? 'fixed bg-white shadow-lg' : 'absolute bg-transparent'}`} >
 			<nav className="flex justify-between m-auto max-w-screen-xl px-5 items-center">
 				<div className="py-2">
-					<Link href="/">
+					<Link href="/" aria-label="Home">
 						<div className="">
 							<LogoIcon classes="max-md:h-28 max-md:w-28" colour={`${navbarVisible ? 'black' : 'white'}`} />
 						</div>
