@@ -1,7 +1,8 @@
 import React from "react";
 import Title from "../Title/Title";
 import Topper from "../Topper/Topper";
-import Owner from "../../assets/owner.jpeg";
+import OwnerWEBP from "../../assets/owner.webp";
+import OwnerJPEG from "../../assets/owner.jpeg";
 import OwnerSmall from "../../assets/owner-small.jpeg";
 
 import Image from "next/image";
@@ -12,17 +13,18 @@ const AboutMe = () => {
       <div className="w-full max-w-7xl m-auto flex flex-col items-center gap-12 lg:gap-16 md:flex-row md:justify-end md:gap-15 lg:gap-[8rem]">
 
         {/* Image Container */}
-        <picture className={`max-w-lg w-full md:order-2 block relative md:w-[47vw] md:max-w-lg md:h-[32rem] lg:h-[43rem]`}>         
-         <Image
+        <picture className={`max-w-lg w-full md:order-2 block relative md:w-[47vw] md:max-w-lg md:h-[32rem] lg:h-[43rem]`}>
+          <source srcSet={OwnerWEBP.src} type="image/webp" />
+          <Image
             loading="lazy"
             decoding="async"
-            src={Owner}
-            alt="room"
+            src={OwnerJPEG}
+            alt="owner"
             width="494"
             height="700"
             className="max-md:p-3 md:absolute top-0 left-0 h-full w-full object-cover"
           />
-       
+
         </picture>
 
         {/* Text Content */}
