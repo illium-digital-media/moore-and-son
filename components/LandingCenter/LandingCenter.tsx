@@ -1,4 +1,5 @@
 import Image from "next/image";
+import backgroundWEBP from "../../assets/hero-bg.webp";
 import background from "../../assets/hero-bg.jpg";
 import Button from "../Button/Button";
 
@@ -22,11 +23,10 @@ const LandingCenter = () => {
 
       {/* Background Image */}
       <picture className={`w-full h-full block absolute top-0 left-0 -z-20 before:content-[''] before:w-full before:h-full before:bg-black before:opacity-60 before:absolute before:block before:top-0 before:left-0 before:z-10`}>
-        <source media="(max-width: 600px)" srcSet={background.src} />
-        <source media="(min-width: 601px)" srcSet={background.src} />
+        <source srcSet={backgroundWEBP.src} type="image/webp" />
         {/* Actual background image */}
         <div className="absolute top-0 left-0 w-full h-full">
-          <Image src={background.src} priority={true} alt="Digital background" loading="eager"  fill style={{objectFit:"cover"}}/>
+          <Image src={background.src} priority={true} alt="Digital background" loading="eager" fill style={{ objectFit: "cover" }} />
         </div>
       </picture>
     </section>
