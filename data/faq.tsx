@@ -8,7 +8,7 @@ export const faqs = [
       question: "Are you licensed and insured?",
       answer:
         "Yes, we are fully licensed and insured to ensure the highest level of professionalism and protection for both our clients and our team.",
-    },
+    }, 
     {
       question: "How experienced is your team in the industry?",
       answer:
