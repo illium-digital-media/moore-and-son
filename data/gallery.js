@@ -11,8 +11,6 @@ import Interior7 from "../assets/interior7.jpeg";
 import Interior8 from "../assets/interior8.jpeg";
 import Interior9 from "../assets/interior9.jpeg";
 import Interior10 from "../assets/interior10.jpeg";
-
-
 import Commercial1 from "../assets/commercial1.jpeg";
 
 export const galleryPhotos = [
