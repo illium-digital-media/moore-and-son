@@ -20,15 +20,15 @@ const HomePage = () => {
       cleanup();
     };
 
-    const timerId = setTimeout(handleUserInteraction, 2000);
+    const timerId = setTimeout(handleUserInteraction, 4000);
 
-    document.addEventListener('click', handleUserInteraction, { once: true });
+    document.addEventListener('touchstart', handleUserInteraction, { once: true });
     document.addEventListener('scroll', handleUserInteraction, { once: true });
     document.addEventListener('mousemove', handleUserInteraction, { once: true });
 
     const cleanup = () => {
       clearTimeout(timerId);
-      document.removeEventListener('click', handleUserInteraction);
+      document.removeEventListener('touchstart', handleUserInteraction);
       document.removeEventListener('scroll', handleUserInteraction);
       document.removeEventListener('mousemove', handleUserInteraction);
     };
