@@ -8,27 +8,54 @@ import GalleryPreview from "../components/sections/GalleryPreview";
 import Services from "../components/sections/Services";
 import Contact from "../components/sections/Contact";
 import Script from "next/script";
+import { useEffect, useState } from 'react';
+
 
 const HomePage = () => {
+  const [loadGA, setLoadGA] = useState(false);
+
+  useEffect(() => {
+    const handleUserInteraction = () => {
+      setLoadGA(true);
+      cleanup();
+    };
+
+    const timerId = setTimeout(handleUserInteraction, 2000);
+
+    document.addEventListener('click', handleUserInteraction, { once: true });
+    document.addEventListener('scroll', handleUserInteraction, { once: true });
+    document.addEventListener('mousemove', handleUserInteraction, { once: true });
+
+    const cleanup = () => {
+      clearTimeout(timerId);
+      document.removeEventListener('click', handleUserInteraction);
+      document.removeEventListener('scroll', handleUserInteraction);
+      document.removeEventListener('mousemove', handleUserInteraction);
+    };
+
+    return cleanup;
+  }, []);
   return (
     <>
-      <Script id="test2"
-       strategy="lazyOnload"
-        src="https://www.googletagmanager.com/gtag/js?id=G-CQRNH0XQM6"
-      />
-      <Script
-        id="test3"
-        strategy="lazyOnload"
-        dangerouslySetInnerHTML={{
-          __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-CQRNH0XQM6');
-            `
-        }}
-      />
+     {loadGA && (
+        <>
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-CQRNH0XQM6"
+            strategy="afterInteractive"
+          />
+          <Script
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-CQRNH0XQM6');
+              `,
+            }}
+          />
+        </>
+      )}
       <Head>
 
         <title>Moore & Son Painting and Decorating</title>
