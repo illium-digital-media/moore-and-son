@@ -17,6 +17,7 @@ const HomePage = () => {
           src="https://www.googletagmanager.com/gtag/js?id=G-CQRNH0XQM6"
         />
          <Script
+         id="test3"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
