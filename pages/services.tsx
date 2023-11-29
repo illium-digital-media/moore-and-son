@@ -8,7 +8,7 @@ const ServicesPage: React.FC = () => {
       <Head>
         {/* Google tag (gtag.js) */}
         <script
-          async
+          defer
           src="https://www.googletagmanager.com/gtag/js?id=G-CQRNH0XQM6"
         />
         <script
