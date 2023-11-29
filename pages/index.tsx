@@ -7,34 +7,11 @@ import LandingCenter from "../components/LandingCenter/LandingCenter";
 import GalleryPreview from "../components/sections/GalleryPreview";
 import Services from "../components/sections/Services";
 import Contact from "../components/sections/Contact";
-import Script from "next/script";
-import useLoadGAOnUserInteraction from "@/hooks/useLoadGAOnUserInteraction";
 
 const HomePage = () => {
-  const loadGA = useLoadGAOnUserInteraction();
   return (
     <>
-      {loadGA && (
-        <>
-          <Script
-            id="gtm-script"
-            src="https://www.googletagmanager.com/gtag/js?id=G-CQRNH0XQM6"
-          />
-          <Script
-            id="gtm-script"
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-CQRNH0XQM6');
-              `,
-            }}
-          />
-        </>
-      )}
       <Head>
-
         <title>Moore & Son Painting and Decorating</title>
         <meta
           name="description"

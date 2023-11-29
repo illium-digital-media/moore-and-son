@@ -4,31 +4,41 @@ import Footer from '../components/sections/Footer';
 import { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 import store from '../store/index';
-import { useEffect } from 'react';
-import { initGTMScriptOnEvent, initGTMScriptWithDelay } from '../data/analytics';
+import Script from "next/script";
+import useLoadGAOnUserInteraction from "@/hooks/useLoadGAOnUserInteraction";
 
 const App = ({ Component, pageProps }: AppProps) => {
-//   useEffect(() => {
-//     const timer = initGTMScriptWithDelay();
-
-//     document.addEventListener('scroll', initGTMScriptOnEvent);
-//     document.addEventListener('mousemove', initGTMScriptOnEvent);
-//     document.addEventListener('touchstart', initGTMScriptOnEvent);
-
-//     return () => {
-//         clearTimeout(timer);
-//         document.removeEventListener('scroll', initGTMScriptOnEvent);
-//         document.removeEventListener('mousemove', initGTMScriptOnEvent);
-//         document.removeEventListener('touchstart', initGTMScriptOnEvent);
-//     };
-// }, []);
+  const loadGA = useLoadGAOnUserInteraction();
 
   return (
-    <Provider store={store}>
-      <Navigation />
-      <Component {...pageProps} />
-      <Footer />
-    </Provider>
+    <>
+      {loadGA && (
+        <>
+          <Script
+            id="gtm-script"
+            src="https://www.googletagmanager.com/gtag/js?id=G-CQRNH0XQM6"
+          />
+          <Script
+            id="gtm-script"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-CQRNH0XQM6');
+              `,
+            }}
+          />
+        </>
+      )}
+      
+      <Provider store={store}>
+        <Navigation />
+        <Component {...pageProps} />
+        <Footer />
+      </Provider>
+    </>
+
   );
 };
 
