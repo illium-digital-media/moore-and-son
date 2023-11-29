@@ -12,7 +12,6 @@ import Script from "next/script";
 const HomePage = () => {
   return (
     <>
-          <Script src='https://code.jquery.com/jquery-3.3.1.js' id="test" />
           <Script id="test2"
           src="https://www.googletagmanager.com/gtag/js?id=G-CQRNH0XQM6"
         />
