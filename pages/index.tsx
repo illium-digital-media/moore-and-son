@@ -13,12 +13,12 @@ const HomePage = () => {
   return (
     <>
       <Script id="test2"
-       strategy="afterInteractive"
+       strategy="lazyOnload"
         src="https://www.googletagmanager.com/gtag/js?id=G-CQRNH0XQM6"
       />
       <Script
         id="test3"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
               window.dataLayer = window.dataLayer || [];
