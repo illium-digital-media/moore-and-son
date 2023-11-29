@@ -12,21 +12,23 @@ import Script from "next/script";
 const HomePage = () => {
   return (
     <>
-          <Script id="test2"
-          src="https://www.googletagmanager.com/gtag/js?id=G-CQRNH0XQM6"
-        />
-         <Script
-         id="test3"
-          dangerouslySetInnerHTML={{
-            __html: `
+      <Script id="test2"
+       strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-CQRNH0XQM6"
+      />
+      <Script
+        id="test3"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
 
               gtag('config', 'G-CQRNH0XQM6');
             `
-          }}
-        />
+        }}
+      />
       <Head>
 
         <title>Moore & Son Painting and Decorating</title>
