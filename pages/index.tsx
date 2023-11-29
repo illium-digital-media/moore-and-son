@@ -7,11 +7,28 @@ import LandingCenter from "../components/LandingCenter/LandingCenter";
 import GalleryPreview from "../components/sections/GalleryPreview";
 import Services from "../components/sections/Services";
 import Contact from "../components/sections/Contact";
+import Script from "next/script";
 
 const HomePage = () => {
   return (
     <>
+          <Script src='https://code.jquery.com/jquery-3.3.1.js' id="test" />
+          <Script id="test2"
+          src="https://www.googletagmanager.com/gtag/js?id=G-CQRNH0XQM6"
+        />
+         <Script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-CQRNH0XQM6');
+            `
+          }}
+        />
       <Head>
+
         <title>Moore & Son Painting and Decorating</title>
         <meta
           name="description"

@@ -26,7 +26,7 @@ const LandingCenter = () => {
         {/* Actual background image */}
         <div className="absolute top-0 left-0 w-full h-full">
           <source srcSet={heroBgWEBP.src} type="image/webp" />
-          <Image src={background} alt="Hero" fill style={{ objectFit: "cover" }} priority />
+          <Image src={heroBgWEBP} alt="Hero" fill style={{ objectFit: "cover" }} priority />
         </div>
       </picture>
     </section>

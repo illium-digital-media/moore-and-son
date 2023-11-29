@@ -8,20 +8,20 @@ import { useEffect } from 'react';
 import { initGTMScriptOnEvent, initGTMScriptWithDelay } from '../data/analytics';
 
 const App = ({ Component, pageProps }: AppProps) => {
-  useEffect(() => {
-    const timer = initGTMScriptWithDelay();
+//   useEffect(() => {
+//     const timer = initGTMScriptWithDelay();
 
-    document.addEventListener('scroll', initGTMScriptOnEvent);
-    document.addEventListener('mousemove', initGTMScriptOnEvent);
-    document.addEventListener('touchstart', initGTMScriptOnEvent);
+//     document.addEventListener('scroll', initGTMScriptOnEvent);
+//     document.addEventListener('mousemove', initGTMScriptOnEvent);
+//     document.addEventListener('touchstart', initGTMScriptOnEvent);
 
-    return () => {
-        clearTimeout(timer);
-        document.removeEventListener('scroll', initGTMScriptOnEvent);
-        document.removeEventListener('mousemove', initGTMScriptOnEvent);
-        document.removeEventListener('touchstart', initGTMScriptOnEvent);
-    };
-}, []);
+//     return () => {
+//         clearTimeout(timer);
+//         document.removeEventListener('scroll', initGTMScriptOnEvent);
+//         document.removeEventListener('mousemove', initGTMScriptOnEvent);
+//         document.removeEventListener('touchstart', initGTMScriptOnEvent);
+//     };
+// }, []);
 
   return (
     <Provider store={store}>
