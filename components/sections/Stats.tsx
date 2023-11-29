@@ -28,7 +28,7 @@ const Stats = () => {
             </ul>
             {/* Background Image */}
             <picture className={`w-full h-full absolute top-0 left-0 block -z-10 bg-black`}>
-                <Image aria-hidden="true" loading="lazy" decoding="async" src={StatsBg} alt="Painting Products" width="1920" height="283" className='absolute top-0 left-0 w-full h-full opacity-20 object-cover' />
+                <Image aria-hidden="true" loading="lazy" decoding="async" src={StatsBgWEBP} alt="Painting Products" width="1920" height="283" className='absolute top-0 left-0 w-full h-full opacity-20 object-cover' />
             </picture>
         </div>
     );
