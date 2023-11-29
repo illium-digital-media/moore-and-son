@@ -37,13 +37,15 @@ const HomePage = () => {
   }, []);
   return (
     <>
-     {loadGA && (
+      {loadGA && (
         <>
           <Script
+            id="gtm-script"
             src="https://www.googletagmanager.com/gtag/js?id=G-CQRNH0XQM6"
             strategy="afterInteractive"
           />
           <Script
+            id="gtm-script"
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `
