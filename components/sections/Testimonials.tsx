@@ -1,31 +1,9 @@
 import React from "react";
 import Title from "../Title/Title";
 import Topper from "../Topper/Topper";
+import testimonialsData from "@/data/testimonials";
 
 const Testimonials = () => {
-  const testimonialsData = [
-    {
-      starsSrc:
-        "https://csimg.nyc3.cdn.digitaloceanspaces.com/Reviews/stars3.svg",
-      text: "Thank you Wayne, great job on refreshing the outside of our house, it looks lovely! Such a lovely guy an couldn't recommend him enough!",
-      name: "Amanda Walker",
-      job: "Homeowner",
-    },
-    {
-      starsSrc:
-        "https://csimg.nyc3.cdn.digitaloceanspaces.com/Reviews/stars3.svg",
-      text: "Well what can I say about this young man that's just decorated my complete bungalow he's done a grand job, also he's very reasonable with his prices, I would highly recommend him, thank you Wayne",
-      name: "Sheila Williams",
-      job: "Homeowner",
-    },
-    {
-      starsSrc:
-        "https://csimg.nyc3.cdn.digitaloceanspaces.com/Reviews/stars3.svg",
-      text: "Would like to say huge thank you to Moore and Son for decorating my living room today I love it, done to perfection. Highly recommend and a lovely guy too, thanks once again.",
-      name: "Heather Gerrard",
-      job: "Homeowner",
-    },
-  ];
 
   return (
     <section className={`p-section`}>
@@ -43,7 +21,6 @@ const Testimonials = () => {
         <ul className={`w-full flex justify-center items-center flex-col gap-4 md:flex-row justify-between items-stretch flex-wrap xl:flex-nowrap`}>
           {testimonialsData.map((testimonial, index) => (
             <li className={`w-full max-w-2xl bg-gray-100 border-box flex justify-center items-start flex-col relative py-8 lg:py-12 px-4 lg:px-10 md:w-[48.5%] xl:w-[49.5%] md:last-of-type:w-full md:last-of-type:max-w-full md:last-of-type:items-center md:last-of-type:text-center xl:w-full xl:items-start xl:last-of-type:text-left xl:last-of-type:items-start`} key={index}>
-              {/* Blue Quote */}
               <img
                 className={`h-auto block mb-5 lg:mb-6 w-40 lg:w-48`}
                 aria-hidden="true"
